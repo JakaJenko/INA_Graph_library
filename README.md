@@ -15,4 +15,8 @@ Komentiranje kode:
 
 
 What to implement:
-- Graph types (directed, undirected, fast/with properties, maybe multigraph)
+- Graph types (directed, undirected, fast/with properties, maybe multigraph)  
+  - Centrality
+    - DegreeCentrality
+    - Pagerank
+    - BetweennesCentrality
