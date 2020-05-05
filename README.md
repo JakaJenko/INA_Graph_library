@@ -1,6 +1,6 @@
 # INA_Graph_library
 
--Description (da se bomo gledovali po NetworkX)
+Description (da se bomo gledovali po NetworkX)
 
 Komentiranje kode:  
 - trojni komentar nad vsako metodo/funkcijo  
