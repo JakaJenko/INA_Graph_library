@@ -48,9 +48,11 @@ What to implement:
   - BetweennesCentrality
     
 - Naloga3
- -Graph Laplacian (matrix)
- -modularity communities (algorithm)
- -LFR benchmark graph
- -girvan newman (Finds communities in a graph )
+    - Graph Laplacian (matrix)
+    - modularity communities (algorithm)
+    - LFR benchmark graph
+    - girvan newman (Finds communities in a graph )
+
+
  
  
