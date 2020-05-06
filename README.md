@@ -46,3 +46,11 @@ What to implement:
   - DegreeCentrality
   - Pagerank
   - BetweennesCentrality
+    
+- Naloga3
+ -Graph Laplacian (matrix)
+ -modularity communities (algorithm)
+ -LFR benchmark graph
+ -girvan newman (Finds communities in a graph )
+ 
+ 
