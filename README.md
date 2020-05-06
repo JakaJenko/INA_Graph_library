@@ -15,8 +15,34 @@ Komentiranje kode:
 
 
 What to implement:
-- Graph types (directed, undirected, fast/with properties, maybe multigraph)  
-  - Centrality
-    - DegreeCentrality
-    - Pagerank
-    - BetweennesCentrality
+- Graph types (directed, undirected, fast/with properties, maybe multigraph)
+
+- Import
+  - Pajek (woth/without properties)
+  - Edge list
+  
+- Bacis graph stuff
+  - List of nodes/edges
+  - Number of nodes/eges
+  - Add/Remove node/edge
+  - Neighbors/degree (in, out, in+out)
+  - Strongly/weakly connected
+  
+- Naloga1
+  - Naloga1_1
+    - Largest connected component
+    - DFS
+    - BFS
+    - Network distances (90% of network distances is network diameter)
+    - Node clustering coefitient
+    - Harmonic mean distance
+
+- Graph construction (for directed and undirected)
+  - Erdoy Renyi
+  - Fully connected
+  - Preferential attachment
+
+- Centrality
+  - DegreeCentrality
+  - Pagerank
+  - BetweennesCentrality
