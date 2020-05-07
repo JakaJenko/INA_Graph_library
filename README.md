@@ -27,12 +27,15 @@ What to implement:
   - Add/Remove node/edge
   - Neighbors/degree (in, out, in+out)
   - Strongly/weakly connected
+  - Average degree
   
 - Naloga1
-  - Largest connected component
   - Network distances (90% of network distances is network diameter)
   - Node clustering coefitient
   - Harmonic mean distance
+
+- Components
+  - Largest connected component
 
 - Traversal
   - DFS (all neighbors, directed, reverse)
@@ -58,16 +61,15 @@ What to implement:
   - Shorthest path
   
 - Naloga2
-    - Centrality (Pagerank, Betweennes, degreeCentrality)
     - Power-law exponent
-    - average degree?
     
-- Naloga3
-    - Graph Laplacian (matrix)
-    - modularity communities (algorithm)
-    - LFR benchmark graph
-    - girvan newman (Finds communities in a graph )
+- Liner algebra
+  - Graph Laplacian (matrix)
 
+- Community
+  - modularity communities (algorithm)
+  - LFR benchmark graph
+  - girvan newman (Finds communities in a graph ) 
 
  
  
