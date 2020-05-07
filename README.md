@@ -46,6 +46,8 @@ What to implement:
   - DegreeCentrality
   - Pagerank
   - BetweennesCentrality
+  - Closeness centrality
+  - ...
   
 - Naloga2
     - Centrality (Pagerank, Betweennes, degreeCentrality)
