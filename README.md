@@ -30,11 +30,13 @@ What to implement:
   
 - Naloga1
   - Largest connected component
-  - DFS
-  - BFS
   - Network distances (90% of network distances is network diameter)
   - Node clustering coefitient
   - Harmonic mean distance
+
+- Traversal
+  - DFS (all neighbors, directed, reverse)
+  - BFS (all neighbors, directed, reverse)
 
 - Graph construction (for directed and undirected)
   - Erdoy Renyi
@@ -47,6 +49,13 @@ What to implement:
   - BetweennesCentrality
   - Closeness centrality
   - ...
+  
+- Cycles:
+  - All cycles
+  - Minimum weigh cycle
+   
+- Paths
+  - Shorthest path
   
 - Naloga2
     - Centrality (Pagerank, Betweennes, degreeCentrality)
