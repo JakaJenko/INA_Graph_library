@@ -29,13 +29,12 @@ What to implement:
   - Strongly/weakly connected
   
 - Naloga1
-  - Naloga1_1
-    - Largest connected component
-    - DFS
-    - BFS
-    - Network distances (90% of network distances is network diameter)
-    - Node clustering coefitient
-    - Harmonic mean distance
+  - Largest connected component
+  - DFS
+  - BFS
+  - Network distances (90% of network distances is network diameter)
+  - Node clustering coefitient
+  - Harmonic mean distance
 
 - Graph construction (for directed and undirected)
   - Erdoy Renyi
