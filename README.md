@@ -46,6 +46,11 @@ What to implement:
   - DegreeCentrality
   - Pagerank
   - BetweennesCentrality
+  
+- Naloga2
+    - Centrality (Pagerank, Betweennes, degreeCentrality)
+    - Power-law exponent
+    - average degree?
     
 - Naloga3
     - Graph Laplacian (matrix)
