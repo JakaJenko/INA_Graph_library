@@ -28,11 +28,8 @@ What to implement:
   - Neighbors/degree (in, out, in+out)
   - Strongly/weakly connected
   - Average degree
-  
-- Naloga1
-  - Network distances (90% of network distances is network diameter)
-  - Node clustering coefitient
-  - Harmonic mean distance
+  - Network distances - effective diameter (90% of network distances is network diameter)
+  - Power-law exponent
 
 - Components
   - Largest connected component
@@ -51,7 +48,10 @@ What to implement:
   - Pagerank
   - BetweennesCentrality
   - Closeness centrality
-  - ...
+  
+- Clustering
+  - node clustering coefficient
+  - node harmonic mean distance
   
 - Cycles:
   - All cycles
@@ -59,9 +59,6 @@ What to implement:
    
 - Paths
   - Shorthest path
-  
-- Naloga2
-    - Power-law exponent
     
 - Liner algebra
   - Graph Laplacian (matrix)
