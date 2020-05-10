@@ -1,8 +1,11 @@
 # INA_Graph_library
 
-Description (da se bomo gledovali po NetworkX)
+INA graph library is a C# library for the creation, manipulation, and study of the structure, dynamics, and functions of complex networks. The inspiration for the library comes from the Networkx library for Python. The library includes most of the algorithms for network analysis used during the INA course and some additional ones.
 
-#Getting started  
+Authors: Jaka Jenko, Julijan Jug, Blaž Kugonič  
+
+
+# Getting started  
 Zahteve
 
 
