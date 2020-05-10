@@ -5,31 +5,24 @@ INA graph library is a C# library for the creation, manipulation, and study of t
 Authors: Jaka Jenko, Julijan Jug, Blaž Kugonič  
 
 
-# Getting started  
-Zahteve
+# Implementation plan    
 
-
-Komentiranje kode:  
-- trojni komentar nad vsako metodo/funkcijo  
-  - Opis  
-  - Parameters   
-  - Returns  
-  - Lahko tudi primer  
-
-
-What to implement:
-- Graph types (directed, undirected, fast/with properties, maybe multigraph)
+- Graph 
+  - directed
+  - undirected
+  - multigraph
+  - fast version
 
 - Import
-  - Pajek (woth/without properties)
+  - Pajek (with properties)
   - Edge list
   
-- Bacis graph stuff
+- Bacis graph functions
   - List of nodes/edges
   - Number of nodes/eges
   - Add/Remove node/edge
   - Neighbors/degree (in, out, in+out)
-  - Strongly/weakly connected
+  - Strongly/weakly connected components
   - Average degree
   - Network distances - effective diameter (90% of network distances is network diameter)
   - Power-law exponent
@@ -51,6 +44,7 @@ What to implement:
   - Pagerank
   - BetweennesCentrality
   - Closeness centrality
+  - ...
   
 - Clustering
   - node clustering coefficient
