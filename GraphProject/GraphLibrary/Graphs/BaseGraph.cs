@@ -24,12 +24,12 @@ namespace GraphLibrary.Graphs
         /// <summary>
         /// Gets number of nodes
         /// </summary>
-        public abstract int NumberOfNodes { get; protected set; }
+        public abstract int NumberOfNodes { get; }
         
         /// <summary>
         /// Gets list of edges
         /// </summary>
-        public abstract int NumberOfEdges { get; protected set; }
+        public abstract int NumberOfEdges { get; }
 
 
         /// <summary>

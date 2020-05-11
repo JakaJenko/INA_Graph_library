@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace GraphLibrary.Graphs.GraphsFast
@@ -7,6 +8,30 @@ namespace GraphLibrary.Graphs.GraphsFast
     public class GraphFastUndirected : GraphFast
     {
         public GraphFastUndirected() { }
+
+        /// <summary>
+        /// Gets list of eges
+        /// </summary>
+        public override List<Tuple<int, int>> Edges
+        {
+            get
+            {
+                var edges = new HashSet<Tuple<int, int>>();
+
+                foreach (KeyValuePair<int, HashSet<int>> entry in this.Network)
+                {
+                    foreach (int connection in entry.Value)
+                    {
+                        if(entry.Key < connection)
+                            edges.Add(new Tuple<int, int>(entry.Key, connection));
+                        else
+                            edges.Add(new Tuple<int, int>(connection, entry.Key));
+                    }
+                }
+
+                return edges.ToList();
+            }
+        }
 
         /// <summary>
         /// Returns list of in and out neighbors of a node
@@ -62,8 +87,6 @@ namespace GraphLibrary.Graphs.GraphsFast
         {
             this.Network[node1].Add(node2);
             this.Network[node2].Add(node1);
-
-            this.NumberOfEdges += 2;
         }
 
         /// <summary>
@@ -76,8 +99,6 @@ namespace GraphLibrary.Graphs.GraphsFast
         {
             this.Network[node1].Remove(node2);
             this.Network[node2].Remove(node1);
-
-            this.NumberOfEdges -= 2;
         }
     }
 }

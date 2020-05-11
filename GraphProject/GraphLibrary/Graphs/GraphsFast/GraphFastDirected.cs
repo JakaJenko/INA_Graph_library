@@ -9,6 +9,23 @@ namespace GraphLibrary.Graphs.GraphsFast
         public GraphFastDirected() {}
 
         /// <summary>
+        /// Gets list of eges
+        /// </summary>
+        public override List<Tuple<int, int>> Edges
+        {
+            get
+            {
+                var edges = new List<Tuple<int, int>>();
+
+                foreach (KeyValuePair<int, HashSet<int>> entry in this.Network)
+                    foreach (int connection in entry.Value)
+                        edges.Add(new Tuple<int, int>(entry.Key, connection));
+
+                return edges;
+            }
+        }
+
+        /// <summary>
         /// Returns list of in and out neighbors of a node
         /// </summary>
         /// <param name="node">Node</param>
@@ -65,7 +82,6 @@ namespace GraphLibrary.Graphs.GraphsFast
         protected override void OnEdgeAdd(int node1, int node2)
         {
             this.Network[node1].Add(node2);
-            this.NumberOfEdges++;
         }
 
         /// <summary>
@@ -76,7 +92,6 @@ namespace GraphLibrary.Graphs.GraphsFast
         protected override void OnEdgeRemove(int node1, int node2)
         {
             this.Network[node1].Remove(node2);
-            this.NumberOfEdges--;
         }
     }
 }

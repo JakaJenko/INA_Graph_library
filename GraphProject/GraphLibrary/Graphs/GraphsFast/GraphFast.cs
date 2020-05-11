@@ -30,41 +30,14 @@ namespace GraphLibrary.Graphs.GraphsFast
         }
 
         /// <summary>
-        /// Gets list of eges
-        /// </summary>
-        public override List<Tuple<int, int>> Edges
-        {
-            get
-            {
-                var edges = new List<Tuple<int, int>>();
-
-                foreach(KeyValuePair<int, HashSet<int>> entry in this.Network)
-                    foreach (int connection in entry.Value)
-                        edges.Add(new Tuple<int, int>(entry.Key, connection));
-
-                return edges;
-            }
-        }
-
-        /// <summary>
         /// Gets number of nodes
         /// </summary>
-        public override int NumberOfNodes { get { return this._NumberOfNodes; } protected set { this._NumberOfNodes = value; } }
+        public override int NumberOfNodes { get { return this.Network.Count; } }
 
         /// <summary>
         /// Gets list of edges
         /// </summary>
-        public override int NumberOfEdges { get { return this._NumberOfEdges; } protected set { this._NumberOfEdges = value; } }
-
-        /// <summary>
-        /// Holds number of nodes and is continuously updated
-        /// </summary>
-        private int _NumberOfNodes = 0;
-
-        /// <summary>
-        /// Holds number of edges and is continuously updated
-        /// </summary>
-        private int _NumberOfEdges = 0;
+        public override int NumberOfEdges { get { return this.Edges.Count; } }
 
         /// <summary>
         /// Adds node consecutively
@@ -72,7 +45,6 @@ namespace GraphLibrary.Graphs.GraphsFast
         public void NodeAdd()
         {
             this.Network.Add(this.NumberOfNodes, new HashSet<int>());
-            this.NumberOfNodes++;
         }
 
         /// <summary>
@@ -82,7 +54,6 @@ namespace GraphLibrary.Graphs.GraphsFast
         public override void NodeAdd(int node)
         {
             this.Network.Add(node, new HashSet<int>());
-            this.NumberOfNodes++;
         }
 
         /// <summary>
@@ -104,10 +75,7 @@ namespace GraphLibrary.Graphs.GraphsFast
             if (!this.Network.ContainsKey(node))
                 throw new Exceptions.NodeNotInGraphException(node);
 
-            this.NumberOfEdges -= this.Network[node].Count;
-
             this.Network.Remove(node);
-            this.NumberOfNodes--;
         }
 
         /// <summary>
