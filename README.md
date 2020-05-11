@@ -4,6 +4,14 @@ INA graph library is a C# library for the creation, manipulation, and study of t
 
 Authors: Jaka Jenko, Julijan Jug, Blaž Kugonič  
 
+# How to use
+If you want to work big graph inlcude
+
+<runtime>
+  <gcAllowVeryLargeObjects enabled="true" />
+</runtime>
+
+in your app.config file.
 
 # Implementation plan    
 
