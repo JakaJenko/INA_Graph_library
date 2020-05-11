@@ -37,22 +37,42 @@ namespace GraphLibrary.Graphs.GraphsFast
             return neighborsIn;
         }
 
+        /// <summary>
+        /// Returns number of in and out neighbors of a node
+        /// </summary>
+        /// <param name="node">Node</param>
+        /// <returns>Number of in and out neighbors</returns>
         public override int NodeDegree(int node)
         {
             return this.NodeDegreeIn(node) + this.NodeDegreeOut(node);
         }
 
+        /// <summary>
+        /// Returns number of in neighbors of a node
+        /// </summary>
+        /// <param name="node">Node</param>
+        /// <returns>Number of in neighbors</returns>
         public override int NodeDegreeIn(int node)
         {
             return this.NeighborsIn(node).Count;
         }
 
+        /// <summary>
+        /// Adds edge from node1 to node2
+        /// </summary>
+        /// <param name="node1">Node from</param>
+        /// <param name="node2">Node to</param>
         protected override void OnEdgeAdd(int node1, int node2)
         {
             this.Network[node1].Add(node2);
             this.NumberOfEdges++;
         }
 
+        /// <summary>
+        /// Removes edge from node1 to node2
+        /// </summary>
+        /// <param name="node1">Node from</param>
+        /// <param name="node2">Node to</param>
         protected override void OnEdgeRemove(int node1, int node2)
         {
             this.Network[node1].Remove(node2);
