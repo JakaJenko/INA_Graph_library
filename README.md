@@ -1,4 +1,4 @@
-# INA Graph library
+# INA Graph library for C#
 
 INA graph library is a C# library for the creation, manipulation, and study of the structure, dynamics, and functions of complex networks. The inspiration for the library comes from the Networkx library for Python. The library includes most of the algorithms for network analysis used during the INA course and some additional ones.
 
@@ -13,7 +13,7 @@ Authors: Jaka Jenko, Julijan Jug, Blaž Kugonič
   - multigraph
   - fast version
 
-- Import
+- Import module
   - Pajek (with properties)
   - Edge list
   
@@ -27,10 +27,10 @@ Authors: Jaka Jenko, Julijan Jug, Blaž Kugonič
   - Network distances - effective diameter (90% of network distances is network diameter)
   - Power-law exponent
 
-- Components
+- Components finding
   - Largest connected component
 
-- Traversal
+- Traversal algorithms
   - DFS (all neighbors, directed, reverse)
   - BFS (all neighbors, directed, reverse)
 
@@ -50,7 +50,7 @@ Authors: Jaka Jenko, Julijan Jug, Blaž Kugonič
   - node clustering coefficient
   - node harmonic mean distance
   
-- Cycles:
+- Cycles 
   - All cycles
   - Minimum weigh cycle
    
