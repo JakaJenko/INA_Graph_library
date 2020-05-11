@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "HneoLAUIPZMfi3ol5RiknUAHVoFs9YiSN/NQHUj9yPi7G0ODKKoWl4A+Kk2DJW3VWQYlgyfiPFqx9BJaemkyrQ==",
+  "success": true,
+  "projectFilePath": "H:\\Jenko\\Documents\\Magisterij\\1_letnik\\ARPI_Analiza_Omrežij\\INA_Graph_library\\GraphProject\\GraphLibrary\\GraphLibrary.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jenko\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\jenko\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

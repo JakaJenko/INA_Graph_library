@@ -1,0 +1,10 @@
+H:\Jenko\Documents\Magisterij\1_letnik\ARPI_Analiza_Omrežij\INA_Graph_library\GraphProject\GraphProgram\bin\Release\GraphProgram.exe.config
+H:\Jenko\Documents\Magisterij\1_letnik\ARPI_Analiza_Omrežij\INA_Graph_library\GraphProject\GraphProgram\bin\Release\GraphProgram.exe
+H:\Jenko\Documents\Magisterij\1_letnik\ARPI_Analiza_Omrežij\INA_Graph_library\GraphProject\GraphProgram\bin\Release\GraphProgram.pdb
+H:\Jenko\Documents\Magisterij\1_letnik\ARPI_Analiza_Omrežij\INA_Graph_library\GraphProject\GraphProgram\bin\Release\GraphLibrary.dll
+H:\Jenko\Documents\Magisterij\1_letnik\ARPI_Analiza_Omrežij\INA_Graph_library\GraphProject\GraphProgram\bin\Release\GraphLibrary.pdb
+H:\Jenko\Documents\Magisterij\1_letnik\ARPI_Analiza_Omrežij\INA_Graph_library\GraphProject\GraphProgram\obj\Release\GraphProgram.csprojAssemblyReference.cache
+H:\Jenko\Documents\Magisterij\1_letnik\ARPI_Analiza_Omrežij\INA_Graph_library\GraphProject\GraphProgram\obj\Release\GraphProgram.csproj.CoreCompileInputs.cache
+H:\Jenko\Documents\Magisterij\1_letnik\ARPI_Analiza_Omrežij\INA_Graph_library\GraphProject\GraphProgram\obj\Release\GraphProgram.csproj.CopyComplete
+H:\Jenko\Documents\Magisterij\1_letnik\ARPI_Analiza_Omrežij\INA_Graph_library\GraphProject\GraphProgram\obj\Release\GraphProgram.exe
+H:\Jenko\Documents\Magisterij\1_letnik\ARPI_Analiza_Omrežij\INA_Graph_library\GraphProject\GraphProgram\obj\Release\GraphProgram.pdb
