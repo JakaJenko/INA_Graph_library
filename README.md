@@ -7,9 +7,11 @@ Authors: Jaka Jenko, Julijan Jug, Blaž Kugonič
 # How to use
 If you want to work big graphs inlcude
 
-'<runtime>
+'''
+<runtime>
   <gcAllowVeryLargeObjects enabled="true" />
-</runtime>'
+</runtime>
+'''
 
 in your app.config file.
 
