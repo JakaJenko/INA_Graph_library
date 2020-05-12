@@ -38,6 +38,12 @@ namespace GraphLibrary.Graphs
         /// <param name="path">Path to the file</param>
         public abstract void ReadPajek(string path);
 
+        /// <summary>
+        /// Creates graph from Edge list file
+        /// </summary>
+        /// <param name="path">Path to the file</param>
+        public abstract void ReadEdgeList(string path);
+
 
         /// <summary>
         /// Adds node

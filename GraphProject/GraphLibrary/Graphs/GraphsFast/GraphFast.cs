@@ -180,5 +180,29 @@ namespace GraphLibrary.Graphs.GraphsFast
                 }
             }
         }
+
+        public override void ReadEdgeList(string path)
+        {
+            using (var file = new System.IO.StreamReader(path))
+            {
+                string line;
+
+                while (file.ReadLine()[0] == '#') { }
+
+                while ((line = file.ReadLine()) != null)
+                {
+                    int node1 = Convert.ToInt32(line.Split(' ')[0]) - 1;
+                    int node2 = Convert.ToInt32(line.Split(' ')[1]) - 1;
+
+                    if (!this.Network.ContainsKey(node1))
+                        this.NodeAdd(node1);
+
+                    if (!this.Network.ContainsKey(node2))
+                        this.NodeAdd(node2);
+
+                    this.EdgeAdd(node1, node2);
+                }
+            }
+        }
     }
 }
