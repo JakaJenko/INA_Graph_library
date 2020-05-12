@@ -65,6 +65,21 @@ namespace GraphLibrary.Graphs.GraphsFast
         }
 
         /// <summary>
+        /// Number of in and out neighbors of all nodes
+        /// </summary>
+        /// <param name="node">Node</param>
+        /// <returns>Dictionary of nodes and numbers of in and out neighbors</returns>
+        public override Dictionary<int, int> NodeDegrees()
+        {
+            var nodeDegrees = new Dictionary<int, int>();
+
+            foreach (var node in this.Nodes)
+                nodeDegrees.Add(node, this.NodeDegree(node));
+
+            return nodeDegrees;
+        }
+
+        /// <summary>
         /// Returns number of in neighbors of a node
         /// </summary>
         /// <param name="node">Node</param>
@@ -72,6 +87,21 @@ namespace GraphLibrary.Graphs.GraphsFast
         public override int NodeDegreeIn(int node)
         {
             return this.NeighborsIn(node).Count;
+        }
+
+        /// <summary>
+        /// Number of in neighbors of all nodes
+        /// </summary>
+        /// <param name="node">Node</param>
+        /// <returns>Dictionary of nodes and numbers of in neighbors</returns>
+        public override Dictionary<int, int> NodeDegreesIn()
+        {
+            var nodeDegreesIn = new Dictionary<int, int>();
+
+            foreach (var node in this.Nodes)
+                nodeDegreesIn.Add(node, this.NodeDegreeIn(node));
+
+            return nodeDegreesIn;
         }
 
         /// <summary>

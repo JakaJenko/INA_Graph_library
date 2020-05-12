@@ -116,6 +116,12 @@ namespace GraphLibrary.Graphs
         public abstract int NodeDegree(int node);
 
         /// <summary>
+        /// Number of in and out neighbors of all nodes
+        /// </summary>
+        /// <returns>Dictionary of nodes and numbers of in and out neighbors</returns>
+        public abstract Dictionary<int, int> NodeDegrees();
+
+        /// <summary>
         /// Number of in neighbors of a node
         /// </summary>
         /// <param name="node">Node</param>
@@ -123,10 +129,22 @@ namespace GraphLibrary.Graphs
         public abstract int NodeDegreeIn(int node);
 
         /// <summary>
+        /// Number of in neighbors of all nodes
+        /// </summary>
+        /// <returns>Dictionary of nodes and numbers of out neighbors</returns>
+        public abstract Dictionary<int, int> NodeDegreesIn();
+
+        /// <summary>
         /// Number of out neighbors of a node
         /// </summary>
         /// <param name="node">Node</param>
         /// <returns>Number of out neighbors</returns>
         public abstract int NodeDegreeOut(int node);
+
+        /// <summary>
+        /// Number of out neighbors of all nodes
+        /// </summary>
+        /// <returns>Dictionary of nodes and numbers of out neighbors</returns>
+        public abstract Dictionary<int, int> NodeDegreesOut();
     }
 }

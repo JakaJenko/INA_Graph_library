@@ -155,6 +155,20 @@ namespace GraphLibrary.Graphs.GraphsFast
         }
 
         /// <summary>
+        /// Number of out neighbors of all nodes
+        /// </summary>
+        /// <returns>Dictionary of nodes and numbers of out neighbors</returns>
+        public override Dictionary<int, int> NodeDegreesOut()
+        {
+            var nodeDegreesOut = new Dictionary<int, int>();
+
+            foreach (var node in this.Nodes)
+                nodeDegreesOut.Add(node, this.NodeDegreeOut(node));
+
+            return nodeDegreesOut;
+        }
+
+        /// <summary>
         /// Creates graph from Pajek file
         /// </summary>
         /// <param name="path">Path to the file</param>

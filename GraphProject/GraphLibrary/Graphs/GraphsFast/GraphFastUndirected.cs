@@ -67,6 +67,21 @@ namespace GraphLibrary.Graphs.GraphsFast
         }
 
         /// <summary>
+        /// Number of in and out neighbors of all nodes
+        /// On GraphFastUndirected <see cref="NodeDegrees()"/>, <see cref="NodeDegreesIn()"/> and <see cref="GraphsFast.GraphFast.NodeDegreesOut()"/> are the same
+        /// </summary>
+        /// <returns>Dictionary of nodes and numbers of in and out neighbors</returns>
+        public override Dictionary<int, int> NodeDegrees()
+        {
+            var nodeDegrees = new Dictionary<int, int>();
+
+            foreach (var node in this.Nodes)
+                nodeDegrees.Add(node, this.NodeDegree(node));
+
+            return nodeDegrees;
+        }
+
+        /// <summary>
         /// Returns number of in neighbors of a node
         /// On GraphFastUndirected <see cref="NodeDegree(int)"/>, <see cref="NodeDegreeIn(int)"/> and <see cref="GraphsFast.GraphFast.NodeDegreeOut(int)"/> are the same
         /// </summary>
@@ -75,6 +90,21 @@ namespace GraphLibrary.Graphs.GraphsFast
         public override int NodeDegreeIn(int node)
         {
             return this.NodeDegreeOut(node);
+        }
+
+        /// <summary>
+        /// Number of in neighbors of all nodes
+        /// On GraphFastUndirected <see cref="NodeDegrees()"/>, <see cref="NodeDegreesIn()"/> and <see cref="GraphsFast.GraphFast.NodeDegreesOut()"/> are the same
+        /// </summary>
+        /// <returns>Dictionary of nodes and numbers of in neighbors</returns>
+        public override Dictionary<int, int> NodeDegreesIn()
+        {
+            var nodeDegreesIn = new Dictionary<int, int>();
+
+            foreach (var node in this.Nodes)
+                nodeDegreesIn.Add(node, this.NodeDegreeIn(node));
+
+            return nodeDegreesIn;
         }
 
         /// <summary>
