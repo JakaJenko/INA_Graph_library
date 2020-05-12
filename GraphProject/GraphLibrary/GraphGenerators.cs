@@ -106,8 +106,6 @@ namespace GraphLibrary
                     int randomEdgeId = rnd.Next(edgeList.Count);
                     int randomNodeId = rnd.Next(2);
 
-                    Console.WriteLine(randomEdgeId + " " + randomNodeId);
-
                    Tuple<int, int> randomEdge = edgeList[randomEdgeId];
 
                     if (randomNodeId == 0)
