@@ -50,6 +50,11 @@ namespace GraphLibrary
             return listOfCcomponents.Count;
         }
 
+        /// <summary>
+        /// Generate connected components
+        /// </summary>
+        /// <param name="graph"></param>
+        /// <returns>Yields sets of nodes, one for each component of graph.</returns>
         public IEnumerable<HashSet<int>> ConnectedComponents(BaseGraph graph)
         {
             HashSet<int> seen = new HashSet<int>();
@@ -78,6 +83,40 @@ namespace GraphLibrary
         public HashSet<int> NodeConnectedComponent(BaseGraph graph, int n)
         {
             return new HashSet<int>(FastBfs(graph, n).ToList());
+        }
+
+        public IEnumerable<HashSet<int>> WeaklyConnectedComponents(BaseGraph graph)
+        {
+            return ConnectedComponents(graph);
+        }
+
+        /// <summary>
+        /// Test directed graph for weak connectivity.
+        /// A directed graph is weakly connected if and only if the graph is connected when the direction of the edge between nodes is ignored.
+        /// Note that if a graph is strongly connected, it is by definition weakly connected as well.
+        /// </summary>
+        /// <param name="graph"></param>
+        /// <returns>True if the graph is weakly connected, False otherwise.</returns>
+        public Boolean IsWeaklyConnected(BaseGraph graph)
+        {
+            if (graph.Nodes.Count == 0)
+            {
+                throw new NotImplementedException("Connectivity is undefined for the null graph.");
+            }
+
+            List<HashSet<int>> components = WeaklyConnectedComponents(graph).ToList<HashSet<int>>();
+            return (components[0].Count == graph.Nodes.Count);
+        }
+
+        /// <summary>
+        /// Returns the number of weakly connected components in graph
+        /// </summary>
+        /// <param name="graph"></param>
+        /// <returns>Number of weakly connected components</returns>
+        public int NumberWeaklyConectedComponents(BaseGraph graph)
+        {
+            List<HashSet<int>> listOfCcomponents = WeaklyConnectedComponents(graph).ToList();
+            return listOfCcomponents.Count;
         }
 
         /// <summary>
