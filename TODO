@@ -6,7 +6,7 @@ Jaka:
 Julijan:
 - Traversal algorithms (DFS, BFS)
 - Community (modularity communities, LFR benchmark graph, girvan newman)
-- Components finding (Largest connected component, Connected components, ....)
+- Conectivity (IsConnected, NumberOfConnectedComponents, NodeConnectedComonents)
 
 Blaž:
 - Clustering (node clustering coefficient, node harmonic mean distance)
