@@ -27,7 +27,7 @@ namespace GraphLibrary
         /// <param name="graph"></param>
         /// <param name="nodeSource">Node from where the BFS algorithm starts</param>
         /// <param name="depth">Up to which depth (distance) the nodes are returned</param>
-        /// <returns>Returns node by node with distance and it's predecesor</returns>
+        /// <returns>Yields Tuple of nodes, distance and it's predecesor</returns>
         public IEnumerable<Tuple<int, int, int?>> BreadthFirstSearch(BaseGraph graph, int nodeSource = 0, int? nodeEnd = null, int? maxDepth = null)
         {
             int currentDepth = 0;
@@ -87,7 +87,7 @@ namespace GraphLibrary
         /// <param name="graph"></param>
         /// <param name="nodeSource">Node from where the BFS algorithm starts</param>
         /// <param name="depth">Up to which depth (distance) the nodes are returned</param>
-        /// <returns>Returns node by node with distance and it's predecesor</returns>
+        /// <returns>Yields Tuple of nodes, distance and it's predecesor</returns>
         public IEnumerable<Tuple<int, int, int?>> DepthFirstSearch(BaseGraph graph, int nodeSource = 0, int? nodeEnd = null, int maxDepth = int.MaxValue)
         {
             if (graph.NumberOfNodes == 0)
