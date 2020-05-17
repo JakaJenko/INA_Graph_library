@@ -6,6 +6,8 @@ Jaka:
 Julijan:
 - Traversal algorithms (DFS, BFS)
 - Conectivity (IsConnected, NumberOfConnectedComponents, NodeConnectedComonents)
+- Weak connectivity
+- Strong conectivity
 
 Blaž:
 - Clustering (node clustering coefficient, node harmonic mean distance)
