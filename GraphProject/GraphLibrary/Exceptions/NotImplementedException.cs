@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
 namespace GraphLibrary.Exceptions
 {
-    public class NotImplementedException
+    public class NotImplementedException : Exception
     {
-        public NotImplementedException()
-        {
-        }
+        public NotImplementedException(string msg) : base(String.Format("NotImplemented: {}", msg)) { }
     }
 }

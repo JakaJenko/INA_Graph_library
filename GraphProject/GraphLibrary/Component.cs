@@ -28,14 +28,7 @@ namespace GraphLibrary
             List<int> connected = new List<int>();
             List<Tuple<int, int, int?>>bfs = new Traversal().BreadthFirstSearchAll(graph);
 
-            if (bfs.Count == graph.NumberOfNodes)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return bfs.Count == graph.NumberOfNodes;
         }
 
         /// <summary>
@@ -85,6 +78,11 @@ namespace GraphLibrary
             return new HashSet<int>(FastBfs(graph, n).ToList());
         }
 
+        /// <summary>
+        /// Generate weakly connected components of graph.
+        /// </summary>
+        /// <param name="graph"></param>
+        /// <returns>Yields sets of nodes, one for each weakly connected component of G</returns>
         public IEnumerable<HashSet<int>> WeaklyConnectedComponents(BaseGraph graph)
         {
             return ConnectedComponents(graph);
@@ -120,12 +118,94 @@ namespace GraphLibrary
         }
 
         /// <summary>
+        /// Generate nodes in strongly connected components of graph
+        /// </summary>
+        /// <param name="graph"></param>
+        /// <returns>Yields sets of nodes, one for each strongly connected component of G</returns>
+        public IEnumerable<HashSet<int>> StronglyConnectedComponents(BaseGraph graph)
+        {
+            Dictionary<int, int> preorder = new Dictionary<int, int>();
+            Dictionary<int, int> lowlink = new Dictionary<int, int>();
+            HashSet<int> scc_found = new HashSet<int>();
+            Queue<int> scc_queue = new Queue<int>();
+            int i = 0;
+            int lastAdded;
+            int lastSCCQueue = -1;
+
+            foreach (int source in graph.Nodes)
+            {
+                if (!scc_found.Contains(source))
+                {
+                    Queue<int> queue = new Queue<int>();
+                    queue.Enqueue(source);
+                    lastAdded = source;
+
+                    while (queue.Count != 0)
+                    {
+                        int v = lastAdded;
+                        if (!preorder.ContainsKey(v))
+                        {
+                            i += 1;
+                            preorder[v] = i;
+                        }
+                        bool done = true;
+                        foreach (int w in graph.NeighborsOut(v)){
+                            if (!preorder.ContainsKey(w))
+                            {
+                                queue.Enqueue(w);
+                                lastAdded = w;
+                                done = false;
+                                break;
+                            }
+                        }
+                        if (done)
+                        {
+                            lowlink[v] = preorder[v];
+                            foreach (int w in graph.NeighborsOut(v))
+                            {
+                                if (!scc_found.Contains(w))
+                                {
+                                    if (preorder[w] > preorder[v])
+                                        lowlink[v] = Math.Min(lowlink[v], lowlink[w]);
+                                    else
+                                        lowlink[v] = Math.Min(lowlink[v], preorder[w]);
+                                }
+                            }
+                            queue.Dequeue();
+                            if (lowlink[v] == preorder[v])
+                            {
+                                HashSet<int> scc = new HashSet<int>();
+                                scc.Add(v);
+                                while (scc_queue.Count != 0 && preorder[lastSCCQueue] > preorder[v]){
+                                    int k = scc_queue.Dequeue();
+                                    scc.Add(k);
+                                }
+                                foreach (int c in scc)
+                                {
+                                    scc_found.Add(c);
+                                }
+                                yield return scc;
+                            }
+                            else
+                            {
+                                scc_queue.Enqueue(v);
+                                lastSCCQueue = v;
+                            }
+                        }
+                            
+                    }
+                }
+            }
+
+
+        }
+
+        /// <summary>
         /// A fast BFS node generator
         /// </summary>
         /// <param name="graph"></param>
         /// <param name="sourceNode"></param>
         /// <returns>BFS nodes</returns>
-        /// <note>For undirected graphs only</note>
         private IEnumerable<int> FastBfs(BaseGraph graph, int sourceNode)
         {
             HashSet<int> seen = new HashSet<int>();
