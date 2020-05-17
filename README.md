@@ -38,11 +38,9 @@ in your app.config file.
   - Power-law exponent
 
 - Components finding
-  - Largest connected component
-  - Connected components
-  - Is connected
-  - Number of connected components
-  - Node connected comonents
+  - Conectivity (IsConnected, NumberOfConnectedComponents, NodeConnectedComonents)
+  - Strong conectivity
+  - Weak conectivity
 
 - Traversal algorithms
   - DFS (all neighbors, directed, reverse)
@@ -74,7 +72,7 @@ in your app.config file.
 - Liner algebra
   - Graph Laplacian (matrix)
 
-- Community
+- Community (Class ready but not yet implemented*)
   - modularity communities (algorithm)
   - LFR benchmark graph
   - girvan newman (Finds communities in a graph ) 
