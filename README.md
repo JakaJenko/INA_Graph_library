@@ -38,11 +38,9 @@ in your app.config file.
   - Power-law exponent
 
 - Components finding
-  - Largest connected component
-  - Connected components
-  - Is connected
-  - Number of connected components
-  - Node connected comonents
+  - Conectivity (IsConnected, NumberOfConnectedComponents, NodeConnectedComonents)
+  - Strong conectivity
+  - Weak conectivity
 
 - Traversal algorithms
   - DFS (all neighbors, directed, reverse)
