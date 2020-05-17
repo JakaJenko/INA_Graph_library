@@ -39,6 +39,7 @@ in your app.config file.
 
 - Components finding
   - Largest connected component
+  - Connected components
 
 - Traversal algorithms
   - DFS (all neighbors, directed, reverse)
