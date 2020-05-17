@@ -40,6 +40,9 @@ in your app.config file.
 - Components finding
   - Largest connected component
   - Connected components
+  - Is connected
+  - Number of connected components
+  - Node connected comonents
 
 - Traversal algorithms
   - DFS (all neighbors, directed, reverse)
