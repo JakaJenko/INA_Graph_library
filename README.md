@@ -15,6 +15,13 @@ If you want to work big graphs inlcude
 
 in your app.config file.
 
+# Results
+
+|                                                                             | C#            | Python - networkx  |
+| ----------------------------------------------------------------------------|:-------------:| -----:|
+| Loading pajek network (facebook.net)                                        | 0.991 sec     | 41.839 sec |
+| Generating erdos renyi graph (5000 nodes and 0,2% probability of edge)      | 5.127 sec     | 7.441 sec |
+
 # Implementation plan    
 
 - Graph 
