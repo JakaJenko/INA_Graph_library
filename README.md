@@ -18,22 +18,20 @@ in your app.config file.
 # Implementation plan    
 
 - Graph 
-  - directed
-  - undirected
-  - multigraph
-  - fast version
+  - fast directed/undirected - DONE  
+  - normal directed/undirected  
 
 - Import module
-  - Pajek (with properties)
-  - Edge list
+  - Pajek (with properties) - DONE
+  - Edge list - DONE
   
 - Bacis graph functions
-  - List of nodes/edges
-  - Number of nodes/eges
-  - Add/Remove node/edge
-  - Neighbors/degree (in, out, in+out)
-  - Strongly/weakly connected components
-  - Average degree
+  - List of nodes/edges - DONE
+  - Number of nodes/eges - DONE
+  - Add/Remove node/edge - DONE
+  - Neighbors/degree (in, out, in+out) - DONE
+  - Strongly/weakly connected components - DONE
+  - Average degree - DONE
   - Network distances - effective diameter (90% of network distances is network diameter)
   - Power-law exponent
 
@@ -43,16 +41,16 @@ in your app.config file.
   - Weak conectivity
 
 - Traversal algorithms
-  - DFS (all neighbors, directed, reverse)
-  - BFS (all neighbors, directed, reverse)
+  - DFS (all neighbors, directed, reverse) - DONE
+  - BFS (all neighbors, directed, reverse) - DONE
 
 - Graph construction (for directed and undirected)
-  - Erdoy Renyi
-  - Fully connected
-  - Preferential attachment
+  - Erdoy Renyi - DONE
+  - Fully connected - DONE
+  - Preferential attachment - DONE
 
 - Centrality
-  - DegreeCentrality
+  - DegreeCentrality - DONE
   - Pagerank
   - BetweennesCentrality
   - Closeness centrality
@@ -67,7 +65,7 @@ in your app.config file.
   - Minimum weigh cycle
    
 - Paths
-  - Shorthest path
+  - Shorthest path - DONE
     
 - Liner algebra
   - Graph Laplacian (matrix)
