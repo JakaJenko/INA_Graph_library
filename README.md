@@ -18,39 +18,39 @@ in your app.config file.
 # Implementation plan    
 
 - Graph 
-  - fast directed/undirected - DONE  
+  - fast directed/undirected - **DONE**  
   - normal directed/undirected  
 
 - Import module
-  - Pajek (with properties) - DONE
-  - Edge list - DONE
+  - Pajek (with properties) - **DONE**
+  - Edge list - **DONE**
   
 - Bacis graph functions
-  - List of nodes/edges - DONE
-  - Number of nodes/eges - DONE
-  - Add/Remove node/edge - DONE
-  - Neighbors/degree (in, out, in+out) - DONE
-  - Strongly/weakly connected components - DONE
-  - Average degree - DONE
+  - List of nodes/edges - **DONE**
+  - Number of nodes/eges - **DONE**
+  - Add/Remove node/edge - **DONE**
+  - Neighbors/degree (in, out, in+out) - **DONE**
+  - Strongly/weakly connected components - **DONE**
+  - Average degree - **DONE**
   - Network distances - effective diameter (90% of network distances is network diameter)
   - Power-law exponent
 
 - Components finding
-  - Conectivity (IsConnected, NumberOfConnectedComponents, NodeConnectedComonents)
-  - Strong conectivity
+  - Conectivity (IsConnected, NumberOfConnectedComponents, NodeConnectedComonents) - **DONE**
+  - Strong conectivity - **DONE**
   - Weak conectivity
 
 - Traversal algorithms
-  - DFS (all neighbors, directed, reverse) - DONE
-  - BFS (all neighbors, directed, reverse) - DONE
+  - DFS (all neighbors, directed, reverse) - **DONE**
+  - BFS (all neighbors, directed, reverse) - **DONE**
 
 - Graph construction (for directed and undirected)
-  - Erdoy Renyi - DONE
-  - Fully connected - DONE
-  - Preferential attachment - DONE
+  - Erdoy Renyi - **DONE**
+  - Fully connected - **DONE**
+  - Preferential attachment - **DONE**
 
 - Centrality
-  - DegreeCentrality - DONE
+  - DegreeCentrality - **DONE**
   - Pagerank
   - BetweennesCentrality
   - Closeness centrality
@@ -65,7 +65,7 @@ in your app.config file.
   - Minimum weigh cycle
    
 - Paths
-  - Shorthest path - DONE
+  - Shorthest path - **DONE**
     
 - Liner algebra
   - Graph Laplacian (matrix)
