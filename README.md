@@ -20,7 +20,7 @@ in your app.config file.
 |                                                                             | C#                            | Python - networkx  |
 | ----------------------------------------------------------------------------|:-----------------------------:|:------------------:|
 | Loading pajek network (facebook.net)                                        | 0.991 sec <br> ~0.025GB RAM   | 41.839 sec <br> ~0.531GB RAM |
-| Generating fully connected graph (5000 node)                                | 18.226 sec <br> ~0.674GB RAM  | 25.248 sec <br> ~3.5GB RAM |
+| Generating fully connected graph (5000 node)                                | 3.240 sec <br> ~0.674GB RAM  | 20.651 sec <br> ~3.5GB RAM |
 | Generating erdos renyi graph (5000 nodes and 0,2% probability of edge)      | 5.127 sec     | 7.441 sec  |
 | Generating erdos renyi graph (10000 nodes and 0,2% probability of edge)     | 25.271 sec    | 29.872 sec |
 | Finding weakly connected components (graph with 4000 nodes)                 | 0.0005 sec    | 0.017 sec |
