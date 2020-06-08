@@ -17,8 +17,8 @@ in your app.config file.
 
 # Results
 
-|                                                                             | C#            | Python - networkx  |
-| ----------------------------------------------------------------------------|:-------------:| -----:|
+|                                                                             | C# \| RAM           | Python - networkx  |
+| ----------------------------------------------------------------------------|:-------------:| ----------:|
 | Loading pajek network (facebook.net)                                        | 0.991 sec     | 41.839 sec |
 | Generating fully connected graph (5000 node)                                | 18.226 sec    | 25.248 sec  |
 | Generating erdos renyi graph (5000 nodes and 0,2% probability of edge)      | 5.127 sec     | 7.441 sec  |
