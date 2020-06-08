@@ -21,8 +21,8 @@ in your app.config file.
 | ----------------------------------------------------------------------------|:-----------------------------:|:------------------:|
 | Loading pajek network (facebook.net)                                        | 0.991 sec <br> ~0.025GB RAM   | 41.839 sec <br> ~0.531GB RAM |
 | Generating fully connected graph (5000 node)                                | 3.240 sec <br> ~0.674GB RAM   | 20.651 sec <br> ~3.5GB RAM |
-| Generating erdos renyi graph (5000 nodes and 0,2% probability of edge)      | 5.127 sec <br> ~0.154GB RAM   | 7.441 sec  |
-| Generating erdos renyi graph (10000 nodes and 0,2% probability of edge)     | 25.271 sec <br> ~0.634GB RAM  | 29.872 sec |
+| Generating erdos renyi graph (5000 nodes and 0,2% probability of edge)      | 5.127 sec <br> ~0.154GB RAM   | 6.066 sec <br> ~0.847GB RAM  |
+| Generating erdos renyi graph (10000 nodes and 0,2% probability of edge)     | 22.171 sec <br> ~0.634GB RAM  | 26.372 sec <br> ~3.401GB RAM |
 | Finding weakly connected components (graph with 4000 nodes)                 | 0.0005 sec    | 0.017 sec |
 
 
