@@ -1,11 +1,11 @@
 Jaka:
 - Centrality (BetweennesCentrality, Pagerank, Closeness centrality)
+- Cycles (All cycles)
 
 Julijan:
-- Traversal algorithms (DFS, BFS)
-- Conectivity (IsConnected, NumberOfConnectedComponents, NodeConnectedComonents)
-- Weak connectivity
 - Strong conectivity
+- Network distances - effective diameter (90% of network distances is network diameter)  
+- Communities
 
 Blaž:
 - Clustering (node clustering coefficient, node harmonic mean distance)
