@@ -48,8 +48,8 @@ in your app.config file.
 
 - Components finding
   - Conectivity (IsConnected, NumberOfConnectedComponents, NodeConnectedComonents) - **DONE**
-  - Strong conectivity - **DONE**
-  - Weak conectivity
+  - Strong conectivity
+  - Weak conectivity - **DONE**
 
 - Traversal algorithms
   - DFS (all neighbors, directed, reverse) - **DONE**
