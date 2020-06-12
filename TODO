@@ -1,5 +1,5 @@
 Jaka:
-- Centrality (DegreeCentrality, BetweennesCentrality, Pagerank, Closeness centrality)
+- Centrality (BetweennesCentrality, Pagerank, Closeness centrality)
 
 Julijan:
 - Traversal algorithms (DFS, BFS)
