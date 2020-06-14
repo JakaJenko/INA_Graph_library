@@ -86,5 +86,8 @@ in your app.config file.
   - LFR benchmark graph
   - girvan newman (Finds communities in a graph ) 
 
+- Distance measures
+  - Effective diameter **DONE**
+  - Radius, Center, Periphery ***DONE***
  
  
