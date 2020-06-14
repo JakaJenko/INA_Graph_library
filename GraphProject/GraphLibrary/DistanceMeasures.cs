@@ -19,7 +19,7 @@ namespace GraphLibrary
         /// <param name="graph"></param>
         /// <param name="p">percentile</param>
         /// <returns>Returns integer the diameter of the graph G.</returns>
-        public static int EffectiveDiameter(BaseGraph graph, double p = 0.9)
+        public int EffectiveDiameter(BaseGraph graph, double p = 0.9)
         {
             var distancesPerNode = NetworkDistances(graph);
             List<short> distances = new List<short>();
@@ -41,11 +41,61 @@ namespace GraphLibrary
         }
 
         /// <summary>
+        /// Returns the radius of the graph G. The radius is the minimum eccentricity.
+        /// </summary>
+        /// <param name="graph"></param>
+        /// <returns>Integer radius of graph.</returns>
+        public int Radius(BaseGraph graph)
+        {
+            Dictionary<int, int> e = Eccentricity(graph);
+            return e.Values.Min();
+        }
+
+        /// <summary>
+        /// Returns the center of the graph G. The center is the set of nodes with eccentricity equal to radius.
+        /// </summary>
+        /// <param name="graph"></param>
+        /// <returns>List of nodes in center.</returns>
+        public List<int> Center(BaseGraph graph)
+        {
+            Dictionary<int, int> e = Eccentricity(graph);
+            List<int> p = new List<int>();
+            int radius = e.Values.Min();
+
+            foreach (KeyValuePair<int, int> entry in e)
+            {
+                if (entry.Value == radius)
+                    p.Add(entry.Key);
+            }
+            return p;
+        }
+
+        /// <summary>
+        /// Returns the periphery of the graph G.The periphery is the set of nodes with eccentricity equal to the diameter.
+        /// </summary>
+        /// <param name="graph"></param>
+        /// <returns>List of nodes in periphery</returns>
+        public List<int> Periphery(BaseGraph graph)
+        {
+            Dictionary<int, int> e = Eccentricity(graph);
+            List<int> p = new List<int>();
+            int diameter = e.Values.Max();
+
+            foreach (KeyValuePair<int, int> entry in e)
+            {
+                if (entry.Value == diameter)
+                    p.Add(entry.Key);
+            }
+            return p;
+        }
+
+
+        /// <summary>
         /// Returns network distances for
         /// </summary>
         /// <param name="graph"></param>
         /// <returns>Returns a list of distances.</returns>
-        public static List<List<short?>> NetworkDistances(BaseGraph graph)
+        private static List<List<short?>> NetworkDistances(BaseGraph graph)
         {
 
             List<List<short?>> distances = new List<List<short?>>();
@@ -88,6 +138,54 @@ namespace GraphLibrary
             }
 
             return distances.ToList();
+        }
+
+        private static Dictionary<int, int> Eccentricity(BaseGraph graph)
+        {
+            int order = graph.NumberOfNodes;
+
+            Dictionary<int,int> e = new Dictionary<int, int>();
+            for(int i=0; i<graph.NumberOfNodes; i++)
+            {
+                Dictionary<int,int> length = SingleSourceShortestPath(graph, i); //maybe i+1
+                int l = length.Count;
+                e[i] = length.Values.Max();
+            }
+            return e;
+        }
+
+        /// <summary>
+        /// Compute the shortest path lengths from source to all reachable nodes.
+        /// </summary>
+        /// <param name="graph"></param>
+        /// <param name="node"></param>
+        /// <returns>Dict keyed by node to shortest path length to source.</returns>
+        private static Dictionary<int, int> SingleSourceShortestPath(BaseGraph graph, int source)
+        {
+            Dictionary<int, int> result = new Dictionary<int, int>();
+            Dictionary<int, int> seen = new Dictionary<int, int>();
+            int level = 0;
+            List<int> nextLevel = new List<int>();
+            List<int> thisLevel = new List<int>();
+            nextLevel.Add(source);
+
+            while(nextLevel.Count > 0)
+            {
+                thisLevel = nextLevel;
+                nextLevel = new List<int>();
+                foreach (int v in thisLevel)
+                {
+                    if (!seen.ContainsKey(v))
+                    {
+                        seen[v] = level;
+                        nextLevel.AddRange(graph.Neighbors(v));
+                        result.Add(v, level);
+                    }
+                }
+                level += 1;
+            }
+
+            return result;
         }
 
     }
