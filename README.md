@@ -15,7 +15,7 @@ If you want to work big graphs inlcude
 
 in your app.config file.
 
-# Results
+# Performance comparison with NetworkX library
 
 |                                                                             | C#                            | Python - networkx  |
 | ----------------------------------------------------------------------------|:-----------------------------:|:------------------:|
