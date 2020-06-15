@@ -83,7 +83,6 @@ in your app.config file.
 
 - Community (Class ready but not yet implemented*)
   - modularity communities (algorithm)
-  - LFR benchmark graph
   - girvan newman (Finds communities in a graph ) 
 
 - Distance measures
