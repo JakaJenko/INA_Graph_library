@@ -72,7 +72,9 @@ in your app.config file.
   - node harmonic mean distance
   - triangles **DONE**
   - transitivity **DONE**
-  
+  - average clustering **DONE**
+  - generalized degree **DONE**
+
 - Cycles 
   - All cycles
   - Minimum weigh cycle
