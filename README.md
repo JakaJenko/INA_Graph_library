@@ -43,7 +43,6 @@ in your app.config file.
   - Neighbors/degree (in, out, in+out) - **DONE**
   - Strongly/weakly connected components - **DONE**
   - Average degree - **DONE**
-  - Network distances - effective diameter (90% of network distances is network diameter)
   - Power-law exponent
 
 - Components finding
