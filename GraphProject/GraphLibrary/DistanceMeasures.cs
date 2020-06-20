@@ -91,8 +91,7 @@ namespace GraphLibrary
 
 
         /// <summary>
-        /// Returns network distances for
-        /// </summary>
+        /// returns netwrok distances for undirected graph
         /// <param name="graph"></param>
         /// <returns>Returns a list of distances.</returns>
         private static List<List<short?>> NetworkDistances(BaseGraph graph)
@@ -109,7 +108,7 @@ namespace GraphLibrary
         }
 
         /// <summary>
-        /// UndirectedDistances is a supporting function used by Diamter
+        /// UndirectedDistances is a supporting function used by Diameter
         /// </summary>
         /// <param name="graph"></param>
         /// <param name="node"></param>

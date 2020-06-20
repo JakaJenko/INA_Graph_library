@@ -68,9 +68,10 @@ in your app.config file.
   - ...
   
 - Clustering
-  - node clustering coefficient
+  - node clustering coefficient **DONE**
   - node harmonic mean distance
   - triangles **DONE**
+  - transitivity **DONE**
   
 - Cycles 
   - All cycles
