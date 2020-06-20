@@ -127,22 +127,19 @@ namespace GraphLibrary
             Dictionary<int, int> preorder = new Dictionary<int, int>();
             Dictionary<int, int> lowlink = new Dictionary<int, int>();
             HashSet<int> scc_found = new HashSet<int>();
-            Queue<int> scc_queue = new Queue<int>();
+            Stack<int> scc_queue = new Stack<int>();
             int i = 0;
-            int lastAdded;
-            int lastSCCQueue = -1;
 
             foreach (int source in graph.Nodes)
             {
                 if (!scc_found.Contains(source))
                 {
-                    Queue<int> queue = new Queue<int>();
-                    queue.Enqueue(source);
-                    lastAdded = source;
+                    Stack<int> queue = new Stack<int>();
+                    queue.Push(source);
 
                     while (queue.Count != 0)
                     {
-                        int v = lastAdded;
+                        int v = queue.Peek();
                         if (!preorder.ContainsKey(v))
                         {
                             i += 1;
@@ -152,8 +149,7 @@ namespace GraphLibrary
                         foreach (int w in graph.NeighborsOut(v)){
                             if (!preorder.ContainsKey(w))
                             {
-                                queue.Enqueue(w);
-                                lastAdded = w;
+                                queue.Push(w);
                                 done = false;
                                 break;
                             }
@@ -171,13 +167,13 @@ namespace GraphLibrary
                                         lowlink[v] = Math.Min(lowlink[v], preorder[w]);
                                 }
                             }
-                            queue.Dequeue();
+                            queue.Pop();
                             if (lowlink[v] == preorder[v])
                             {
                                 HashSet<int> scc = new HashSet<int>();
                                 scc.Add(v);
-                                while (scc_queue.Count != 0 && preorder[lastSCCQueue] > preorder[v]){
-                                    int k = scc_queue.Dequeue();
+                                while (scc_queue.Count != 0 && preorder[scc_queue.Peek()] > preorder[v]){
+                                    int k = scc_queue.Pop();
                                     scc.Add(k);
                                 }
                                 foreach (int c in scc)
@@ -188,8 +184,7 @@ namespace GraphLibrary
                             }
                             else
                             {
-                                scc_queue.Enqueue(v);
-                                lastSCCQueue = v;
+                                scc_queue.Push(v);
                             }
                         }
                             
