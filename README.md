@@ -70,6 +70,7 @@ in your app.config file.
 - Clustering
   - node clustering coefficient
   - node harmonic mean distance
+  - triangles **DONE**
   
 - Cycles 
   - All cycles
