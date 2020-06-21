@@ -77,6 +77,7 @@ in your app.config file.
 - Cycles 
   - All cycles
   - Minimum weigh cycle
+  - Cycle basis **DONE**
    
 - Paths
   - Shorthest path - **DONE**
