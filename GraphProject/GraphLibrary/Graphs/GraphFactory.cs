@@ -5,6 +5,9 @@ using GraphLibrary.Graphs.GraphsFast;
 
 namespace GraphLibrary.Graphs
 {
+    /// <summary>
+    /// GraphFactory
+    /// </summary>
     public class GraphFactory
     {
         public GraphFactory() { }

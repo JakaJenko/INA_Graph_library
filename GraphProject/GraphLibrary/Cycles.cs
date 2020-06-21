@@ -9,6 +9,9 @@ using GraphLibrary;
 
 namespace GraphLibrary
 {
+    /// <summary>
+    /// Cycles
+    /// </summary>
     public class Cycles
     {
         /// <summary>

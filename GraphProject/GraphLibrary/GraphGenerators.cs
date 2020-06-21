@@ -7,17 +7,20 @@ using GraphLibrary.Graphs;
 
 namespace GraphLibrary
 {
+    /// <summary>
+    /// Graph generators
+    /// </summary>
     public class GraphGenerators
     {
         private GraphFactory graphFactory = new GraphFactory();
 
         /// <summary>
-        /// Returns complete graph
-        /// Each node is connected to each other node
+        /// Returns complete graph.
+        /// Each node is connected to each other node.
         /// </summary>
-        /// <param name="numberOfNodes">Number of nodes in generated graph. Higher than 0</param>
+        /// <param name="numberOfNodes">Number of nodes in generated graph. Higher than 0.</param>
         /// <param name="graphType">Graph type, defaults to <see cref="GraphTypes.GraphFastDirected"/></param>
-        /// <returns></returns>
+        /// <returns>A complete graph with specified number of nodes.</returns>
         public BaseGraph CompleteGraph(int numberOfNodes, GraphTypes graphType = GraphTypes.GraphFastDirected)
         {
             if (numberOfNodes < 1)
@@ -37,13 +40,13 @@ namespace GraphLibrary
         }
 
         /// <summary>
-        /// Creates Erdos-Eenyi graph
+        /// Creates Erdos-Renyi graph.
         /// </summary>
-        /// <param name="numberOfNodes">Number of nodes in generated graph. Higher than 0</param>
-        /// <param name="propabilityOfEdge">Probability of the edge between two nodes. Value between 0 and 1</param>
+        /// <param name="numberOfNodes">Number of nodes in generated graph. Higher than 0.</param>
+        /// <param name="propabilityOfEdge">Probability of the edge between two nodes. Value between 0 and 1.</param>
         /// <param name="graphType">Graph type, defaults to <see cref="GraphTypes.GraphFastDirected"/></param>
-        /// <returns></returns>
-        public BaseGraph ErdosEenyiGraph(int numberOfNodes, double propabilityOfEdge, GraphTypes graphType = GraphTypes.GraphFastDirected)
+        /// <returns>A ErdosReny graph.</returns>
+        public BaseGraph ErdosRenyiGraph(int numberOfNodes, double propabilityOfEdge, GraphTypes graphType = GraphTypes.GraphFastDirected)
         {
             if (numberOfNodes < 1)
                 throw new ArgumentOutOfRangeException("numberOfNodes", numberOfNodes, "Value of numberOfNodes should be higher than 0");
@@ -74,12 +77,12 @@ namespace GraphLibrary
         }
 
         /// <summary>
-        /// 
+        /// Generates a graph using the preferential attachment model.
         /// </summary>
-        /// <param name="numberOfNodes"></param>
-        /// <param name="averageNeighbors"></param>
-        /// <param name="graphType"></param>
-        /// <returns></returns>
+        /// <param name="numberOfNodes">Number of nodes in generated graph. Higher than 0.</param>
+        /// <param name="averageNeighbors">Average node degree.</param>
+        /// <param name="graphType">Graph type, defaults to <see cref="GraphTypes.GraphFastDirected"/></param>
+        /// <returns>A generated preferential attachment graph.</returns>
         public BaseGraph PreferentialAttachmentModel(int numberOfNodes, int averageNeighbors, GraphTypes graphType = GraphTypes.GraphFastDirected)
         {
             if (numberOfNodes < 1)

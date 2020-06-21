@@ -7,27 +7,30 @@ using System.Text;
 
 namespace GraphLibrary
 {
+    /// <summary>
+    /// Graph traversal algorithms.
+    /// </summary>
     public class Traversal
     {
         /// <summary>
-        /// Returns all nodes with distance from nodeSource and predecesor based on Breadth first search
+        /// Returns all nodes with distance from nodeSource and predecesor based on Breadth first search.
         /// </summary>
-        /// <param name="graph"></param>
-        /// <param name="nodeSource">Node from where the BFS algorithm starts</param>
-        /// <param name="depth">Up to which depth (distance) the nodes are returned</param>
-        /// <returns>Returns nodes with distances and it's predecesor</returns>
+        /// <param name="graph">BaseGraph graph</param>
+        /// <param name="nodeSource">Node from where the BFS algorithm starts.</param>
+        /// <param name="depth">Up to which depth (distance) the nodes are returned.</param>
+        /// <returns>Returns nodes with distances and it's predecesor.</returns>
         public List<Tuple<int, int, int?>> BreadthFirstSearchAll(BaseGraph graph, int nodeSource = 0, int? nodeEnd = null, int? maxDepth = null)
         {
             return this.BreadthFirstSearch(graph, nodeSource, nodeEnd, maxDepth).ToList();
         }
 
         /// <summary>
-        /// Returns node with node with distance from nodeSource and predecesor based on Breadth first search
+        /// Returns node with node with distance from nodeSource and predecesor based on Breadth first search.
         /// </summary>
-        /// <param name="graph"></param>
-        /// <param name="nodeSource">Node from where the BFS algorithm starts</param>
-        /// <param name="depth">Up to which depth (distance) the nodes are returned</param>
-        /// <returns>Yields Tuple of nodes, distance and it's predecesor</returns>
+        /// <param name="graph">BaseGraph graph</param>
+        /// <param name="nodeSource">Node from where the BFS algorithm starts.</param>
+        /// <param name="depth">Up to which depth (distance) the nodes are returned.</param>
+        /// <returns>Yields Tuple of nodes, distance and it's predecesor.</returns>
         public IEnumerable<Tuple<int, int, int?>> BreadthFirstSearch(BaseGraph graph, int nodeSource = 0, int? nodeEnd = null, int? maxDepth = null)
         {
             int currentDepth = 0;
@@ -70,24 +73,24 @@ namespace GraphLibrary
         }
 
         /// <summary>
-        /// Returns all nodes with distance from nodeSource and predecesor based on Depth first search
+        /// Returns all nodes with distance from nodeSource and predecesor based on Depth first search.
         /// </summary>
-        /// <param name="graph"></param>
-        /// <param name="nodeSource">Node from where the DFS algorithm starts</param>
-        /// <param name="depth">Up to which depth (distance) the nodes are returned</param>
-        /// <returns>Returns nodes with distances and it's predecesor</returns>
+        /// <param name="graph">BaseGraph graph.</param>
+        /// <param name="nodeSource">Node from where the DFS algorithm starts.</param>
+        /// <param name="depth">Up to which depth (distance) the nodes are returned.</param>
+        /// <returns>Returns nodes with distances and it's predecesor.</returns>
         public List<Tuple<int, int, int?>> DepthFirstSearchAll(BaseGraph graph, int nodeSource = 0, int? nodeEnd = null, int maxDepth = int.MaxValue)
         {
             return this.DepthFirstSearch(graph, nodeSource, nodeEnd, maxDepth).ToList();
         }
 
         /// <summary>
-        /// Returns node with node with distance from nodeSource and predecesor based on Breadth first search
+        /// Returns node with node with distance from nodeSource and predecesor based on Breadth first search.
         /// </summary>
-        /// <param name="graph"></param>
-        /// <param name="nodeSource">Node from where the BFS algorithm starts</param>
-        /// <param name="depth">Up to which depth (distance) the nodes are returned</param>
-        /// <returns>Yields Tuple of nodes, distance and it's predecesor</returns>
+        /// <param name="graph">BaseGraph graph.</param>
+        /// <param name="nodeSource">Node from where the BFS algorithm starts.</param>
+        /// <param name="depth">Up to which depth (distance) the nodes are returned.</param>
+        /// <returns>Yields Tuple of nodes, distance and it's predecesor.</returns>
         public IEnumerable<Tuple<int, int, int?>> DepthFirstSearch(BaseGraph graph, int nodeSource = 0, int? nodeEnd = null, int maxDepth = int.MaxValue)
         {
             if (graph.NumberOfNodes == 0)

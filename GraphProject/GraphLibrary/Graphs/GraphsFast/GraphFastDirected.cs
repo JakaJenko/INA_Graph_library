@@ -4,6 +4,9 @@ using System.Text;
 
 namespace GraphLibrary.Graphs.GraphsFast
 {
+    /// <summary>
+    /// GraphFast directed
+    /// </summary>
     public class GraphFastDirected : GraphFast
     {
         public GraphFastDirected() {}

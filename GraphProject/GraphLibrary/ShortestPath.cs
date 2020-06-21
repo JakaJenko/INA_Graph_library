@@ -6,8 +6,18 @@ using System.Text;
 
 namespace GraphLibrary
 {
+    /// <summary>
+    /// Shortest path finder
+    /// </summary>
     public class ShortestPath
     {
+        /// <summary>
+        /// Finds shortes path, given the start and end nodes.
+        /// </summary>
+        /// <param name="graph">BaseGraph graph.</param>
+        /// <param name="nodeSource">Source node.</param>
+        /// <param name="nodeEnd">End node</param>
+        /// <returns>Returns the shortest path from start to end node.</returns>
         public List<int> ShorthestPath(BaseGraph graph, int nodeSource, int nodeEnd)
         {
             var traversal = new Traversal();

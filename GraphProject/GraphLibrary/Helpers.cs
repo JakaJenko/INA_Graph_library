@@ -4,6 +4,9 @@ using System.Text;
 
 namespace GraphLibrary
 {
+    /// <summary>
+    /// Helpers class.
+    /// </summary>
     class Helpers
     {
         /// <summary>
@@ -29,10 +32,10 @@ namespace GraphLibrary
 
         /// <summary>
         /// Returns variations of edges from list of nodes.
-        /// Used for directed graphs
+        /// Used for directed graphs.
         /// </summary>
         /// <param name="nodes">List of edges</param>
-        /// <returns>Returns variations of edges from list of nodes</returns>
+        /// <returns>Returns variations of edges from list of nodes.</returns>
         /// <example>
         /// Nodes = {1, 2, 3}
         /// Result = 12, 13, 21, 23, 31 ,32

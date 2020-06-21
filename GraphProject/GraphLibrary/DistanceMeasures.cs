@@ -9,6 +9,9 @@ using GraphLibrary;
 
 namespace GraphLibrary
 {
+    /// <summary>
+    /// Distance measures
+    /// </summary>
     public class DistanceMeasures
     {
 
@@ -139,6 +142,11 @@ namespace GraphLibrary
             return distances.ToList();
         }
 
+        /// <summary>
+        /// Eccentricity
+        /// </summary>
+        /// <param name="graph"></param>
+        /// <returns></returns>
         private static Dictionary<int, int> Eccentricity(BaseGraph graph)
         {
             int order = graph.NumberOfNodes;

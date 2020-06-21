@@ -9,7 +9,10 @@ using GraphLibrary;
 
 namespace GraphLibrary
 {
-    public class Comunity
+    /// <summary>
+    /// Community
+    /// </summary>
+    public class Community
     {
         /// <summary>
         /// Finds communities in a graph using the Girvan–Newman method.

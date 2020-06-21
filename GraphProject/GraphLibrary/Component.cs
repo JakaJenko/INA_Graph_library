@@ -9,6 +9,9 @@ using GraphLibrary;
 
 namespace GraphLibrary
 {
+    /// <summary>
+    /// Component
+    /// </summary>
     public class Component
     {
         /// <summary>
@@ -34,9 +37,9 @@ namespace GraphLibrary
         /// <summary>
         /// Returns the number of connected components.
         /// </summary>
-        /// <param name="graph"></param>
-        /// <returns>Number of connected components</returns>
-        /// <note>For undirected graphs only</note>
+        /// <param name="graph">BaseGraph graph.</param>
+        /// <returns>Number of connected components.</returns>
+        /// <note>For undirected graphs only.</note>
         public int NumberConectedComponents(BaseGraph graph)
         {
             List<HashSet<int>> listOfCcomponents = ConnectedComponents(graph).ToList();
@@ -44,9 +47,9 @@ namespace GraphLibrary
         }
 
         /// <summary>
-        /// Generate connected components
+        /// Generate connected components.
         /// </summary>
-        /// <param name="graph"></param>
+        /// <param name="graph">BaseGraph graph.</param>
         /// <returns>Yields sets of nodes, one for each component of graph.</returns>
         public IEnumerable<HashSet<int>> ConnectedComponents(BaseGraph graph)
         {
@@ -67,12 +70,12 @@ namespace GraphLibrary
         }
 
         /// <summary>
-        /// Returns the set of nodes in the component of graph containing node n
+        /// Returns the set of nodes in the component of graph containing node n.
         /// </summary>
-        /// <param name="graph"></param>
-        /// <param name="node"></param>
-        /// <returns>A set of nodes in the component of G containing node n</returns>
-        /// <note>For undirected graphs only</note>
+        /// <param name="graph">BaseGraph graph.</param>
+        /// <param name="node">Node.</param>
+        /// <returns>A set of nodes in the component of G containing node n.</returns>
+        /// <note>For undirected graphs only.</note>
         public HashSet<int> NodeConnectedComponent(BaseGraph graph, int n)
         {
             return new HashSet<int>(FastBfs(graph, n).ToList());
@@ -81,8 +84,8 @@ namespace GraphLibrary
         /// <summary>
         /// Generate weakly connected components of graph.
         /// </summary>
-        /// <param name="graph"></param>
-        /// <returns>Yields sets of nodes, one for each weakly connected component of G</returns>
+        /// <param name="graph">BaseGraph graph.</param>
+        /// <returns>Yields sets of nodes, one for each weakly connected component of G.</returns>
         public IEnumerable<HashSet<int>> WeaklyConnectedComponents(BaseGraph graph)
         {
             return ConnectedComponents(graph);
@@ -93,7 +96,7 @@ namespace GraphLibrary
         /// A directed graph is weakly connected if and only if the graph is connected when the direction of the edge between nodes is ignored.
         /// Note that if a graph is strongly connected, it is by definition weakly connected as well.
         /// </summary>
-        /// <param name="graph"></param>
+        /// <param name="graph">BaseGraph graph.</param>
         /// <returns>True if the graph is weakly connected, False otherwise.</returns>
         public Boolean IsWeaklyConnected(BaseGraph graph)
         {
@@ -107,10 +110,10 @@ namespace GraphLibrary
         }
 
         /// <summary>
-        /// Returns the number of weakly connected components in graph
+        /// Returns the number of weakly connected components in graph.
         /// </summary>
-        /// <param name="graph"></param>
-        /// <returns>Number of weakly connected components</returns>
+        /// <param name="graph">BaseGraph graph</param>
+        /// <returns>Number of weakly connected components.</returns>
         public int NumberWeaklyConectedComponents(BaseGraph graph)
         {
             List<HashSet<int>> listOfCcomponents = WeaklyConnectedComponents(graph).ToList();
@@ -118,10 +121,10 @@ namespace GraphLibrary
         }
 
         /// <summary>
-        /// Generate nodes in strongly connected components of graph
+        /// Generate nodes in strongly connected components of graph.
         /// </summary>
-        /// <param name="graph"></param>
-        /// <returns>Yields sets of nodes, one for each strongly connected component of G</returns>
+        /// <param name="graph">BaseGraph graph.</param>
+        /// <returns>Yields sets of nodes, one for each strongly connected component of G.</returns>
         public IEnumerable<HashSet<int>> StronglyConnectedComponents(BaseGraph graph)
         {
             Dictionary<int, int> preorder = new Dictionary<int, int>();
@@ -196,11 +199,11 @@ namespace GraphLibrary
         }
 
         /// <summary>
-        /// A fast BFS node generator
+        /// A fast BFS node generator.
         /// </summary>
         /// <param name="graph"></param>
         /// <param name="sourceNode"></param>
-        /// <returns>BFS nodes</returns>
+        /// <returns>BFS nodes.</returns>
         private IEnumerable<int> FastBfs(BaseGraph graph, int sourceNode)
         {
             HashSet<int> seen = new HashSet<int>();
