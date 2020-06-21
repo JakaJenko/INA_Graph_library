@@ -47,7 +47,7 @@ in your app.config file.
 
 - Components finding
   - Conectivity (IsConnected, NumberOfConnectedComponents, NodeConnectedComonents) - **DONE**
-  - Strong conectivity
+  - Strong conectivity **DONE**
   - Weak conectivity - **DONE**
 
 - Traversal algorithms
