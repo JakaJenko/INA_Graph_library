@@ -1,10 +1,16 @@
+[![NuGet](https://img.shields.io/badge/dynamic/xml?color=blue&label=NuGet&query=%2F&suffix=v%201.0.1&url=https%3A%2F%2Fwww.nuget.org%2Fpackages%2FGraphNetworkLibrary%2F)](https://www.nuget.org/packages/GraphNetworkLibrary/)
+
 # INA C# Network library
 
 INA network library is a C# library for the creation, manipulation, and study of the structure, dynamics, and functions of complex networks. The inspiration for the library comes from the Networkx library for Python. The library includes most of the core algorithms for network analysis used during the INA course and some additional ones.
 
-Authors: Jaka Jenko, Julijan Jug, Blaž Kugonič  
+Authors: Jaka Jenko, Julijan Jug  
 
 # How to use
+
+[Documentation](https://jakajenko.github.io/INA_Graph_library/Documentation/index.html)
+
+
 If you want to work big graphs inlcude
 
 ```
