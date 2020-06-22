@@ -8,7 +8,7 @@ Authors: Jaka Jenko, Julijan Jug
 
 # How to use
 
-[Documentation](https://jakajenko.github.io/INA_Graph_library/Documentation/index.html)
+- [Documentation](https://jakajenko.github.io/INA_Graph_library/Documentation/index.html)
 
 
 If you want to work big graphs inlcude
