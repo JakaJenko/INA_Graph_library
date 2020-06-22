@@ -13,7 +13,7 @@ Authors: Jaka Jenko, Julijan Jug
 
 If you want to work big graphs inlcude
 
-```
+```c#
 <runtime>
   <gcAllowVeryLargeObjects enabled="true" />
 </runtime>
