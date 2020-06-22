@@ -2,13 +2,15 @@
 
 # INA C# Network library
 
-[Documentation](https://jakajenko.github.io/INA_Graph_library/Documentation/index.html)
-
 INA network library is a C# library for the creation, manipulation, and study of the structure, dynamics, and functions of complex networks. The inspiration for the library comes from the Networkx library for Python. The library includes most of the core algorithms for network analysis used during the INA course and some additional ones.
 
 Authors: Jaka Jenko, Julijan Jug  
 
 # How to use
+
+[Documentation](https://jakajenko.github.io/INA_Graph_library/Documentation/index.html)
+
+
 If you want to work big graphs inlcude
 
 ```
