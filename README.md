@@ -24,7 +24,7 @@ in your app.config file.
 
 ## Examples
 
-```
+```c#
 //Reading grah from file
 var graphFastDirected = new GraphFastDirected();
 graphFastDirected.ReadPajek(@"..\graph.net");
