@@ -21,6 +21,24 @@ If you want to work big graphs inlcude
 
 in your app.config file.
 
+
+## Examples
+
+```
+//Reading grah from file
+var graphFastDirected = new GraphFastDirected();
+graphFastDirected.ReadPajek(@"..\graph.net");
+
+//Printing graph nodes and edges
+Console.WriteLine("Directed - nodes: " + graphFastDirected.NumberOfNodes);
+Console.WriteLine("Directed - edges: " + graphFastDirected.NumberOfEdges);
+
+
+//Generating graph
+var graphGenerators = new GraphGenerators();
+var graphFastUndirectedComplete = graphGenerators.CompleteGraph(100, GraphTypes.GraphFastUndirected);
+```
+
 # Performance comparison with NetworkX library
 
 |                                                                             | C#                            | Python - networkx  |
