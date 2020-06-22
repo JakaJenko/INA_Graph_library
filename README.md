@@ -11,7 +11,7 @@ Authors: Jaka Jenko, Julijan Jug
 - [Documentation](https://jakajenko.github.io/INA_Graph_library/Documentation/index.html)
 
 
-If you want to work big graphs inlcude
+If you want to work with big graphs inlcude
 
 ```c#
 <runtime>
