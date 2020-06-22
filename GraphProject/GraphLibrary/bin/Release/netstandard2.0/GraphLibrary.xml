@@ -1,0 +1,810 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GraphLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:GraphLibrary.Centrality">
+            <summary>
+            Centrality
+            </summary>
+        </member>
+        <member name="M:GraphLibrary.Centrality.DegreeCentrality(GraphLibrary.Graphs.BaseGraph)">
+            <summary>
+            Computes degree centrality for all nodes.
+            </summary>
+            <param name="graph">BaseGraph graph.</param>
+            <returns>Dictionary of node and its degree centrality.</returns>
+        </member>
+        <member name="M:GraphLibrary.Centrality.DegreeCentrality(GraphLibrary.Graphs.BaseGraph,System.Int32)">
+            <summary>
+            Computes degree centrality for one node.
+            </summary>
+            <param name="graph">BaseGraph graph.</param>
+            <returns>Returns node's degree centrality.</returns>
+        </member>
+        <member name="M:GraphLibrary.Centrality.DegreeInCentrality(GraphLibrary.Graphs.BaseGraph)">
+            <summary>
+            Computes in-degree centrality for all nodes.
+            </summary>
+            <param name="graph">BaseGraph graph.</param>
+            <returns>Dictionary of node and its in-degree centrality.</returns>
+        </member>
+        <member name="M:GraphLibrary.Centrality.DegreeInCentrality(GraphLibrary.Graphs.BaseGraph,System.Int32)">
+            <summary>
+            Computes in-degree centrality for one node.
+            </summary>
+            <param name="graph">BaseGraph graph.</param>
+            <returns>Returns node's in-degree centrality.</returns>
+        </member>
+        <member name="M:GraphLibrary.Centrality.DegreeOutCentrality(GraphLibrary.Graphs.BaseGraph)">
+            <summary>
+            Computes out-degree centrality for all nodes.
+            </summary>
+            <param name="graph">BaseGraph graph.</param>
+            <returns>Dictionary of node and its out-degree centrality.</returns>
+        </member>
+        <member name="M:GraphLibrary.Centrality.DegreeOutCentrality(GraphLibrary.Graphs.BaseGraph,System.Int32)">
+            <summary>
+            Computes out-degree centrality for one node.
+            </summary>
+            <param name="graph">BaseGraph graph.</param>
+            <returns>Returns node's out-degree centrality.</returns>
+        </member>
+        <member name="M:GraphLibrary.Centrality.BetweenessCentrality">
+            <summary>
+            Betweeness centrality.
+            </summary>
+        </member>
+        <member name="M:GraphLibrary.Centrality.ClosenessCentrality">
+            <summary>
+            Closeness centrality.
+            </summary>
+        </member>
+        <member name="M:GraphLibrary.Centrality.Pagerank">
+            <summary>
+            PageRank
+            </summary>
+        </member>
+        <member name="T:GraphLibrary.Clustering">
+            <summary>
+            Clustering
+            </summary>
+        </member>
+        <member name="M:GraphLibrary.Clustering.Triangles(GraphLibrary.Graphs.BaseGraph,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            Compute the number of triangles. Finds the number of triangles that include a node as one vertex.
+            </summary>
+            <param name="graph">A BaseGraph graph.</param>
+            <param name="nodes">A List of nodes, optional. Compute triangles for nodes in this container.</param>
+            <returns>Number of triangles keyed by node label.</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:GraphLibrary.Clustering.Transitivity(GraphLibrary.Graphs.BaseGraph)" -->
+        <member name="M:GraphLibrary.Clustering.ClusteringCoefficient(GraphLibrary.Graphs.BaseGraph,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            Compute the clustering coefficient for nodes. Implemented only for unweighted and undirected graphs.
+            </summary>
+            <param name="graph">Basegraph graph.</param>
+            <param name="nodes">List of nodes - optional.</param>
+            <returns>Dictionary of clustering coefficients at specified nodes.</returns>
+        </member>
+        <member name="M:GraphLibrary.Clustering.AverageClustering(GraphLibrary.Graphs.BaseGraph,System.Collections.Generic.List{System.Int32},System.Boolean)">
+            <summary>
+            Compute the average clustering coefficient for the graph G. The clustering coefficient for the graph is the average.
+            </summary>
+            <param name="graph">BaseGraph graph.</param>
+            <param name="nodes">List of nodes.</param>
+            <param name="countZeros">If False include only the nodes with nonzero clustering in the average.</param>
+            <returns>Double: Avergae clustering.</returns>
+        </member>
+        <member name="M:GraphLibrary.Clustering.GeneralizedDegree(GraphLibrary.Graphs.BaseGraph,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            Compute the generalized degree for nodes. For each node, the generalized degree shows how many edges of given triangle multiplicity the node is connected to.The triangle multiplicity of an edge is the number of triangles an edge participates in.
+            </summary>
+            <param name="graph">BaseGraph graph.</param>
+            <param name="nodes">List of nodes.</param>
+            <returns>Generalized degree of specified nodes. The Counter is keyed by edge triangle multiplicity.</returns>
+        </member>
+        <member name="M:GraphLibrary.Clustering.TrianglesAndDegreeIter(GraphLibrary.Graphs.BaseGraph,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            This double counts triangles so you may want to divide by 2. See degree(), triangles() and generalized_degree() for definitions and details.
+            </summary>
+            <param name="graph">BaseGraph graph.</param>
+            <returns>Return an iterator of (node, degree, triangles, generalized degree).</returns>
+        </member>
+        <member name="T:GraphLibrary.Component">
+            <summary>
+            Component
+            </summary>
+        </member>
+        <member name="M:GraphLibrary.Component.IsConnected(GraphLibrary.Graphs.BaseGraph)">
+            <summary>
+            Returns True if the graph is connected, false otherwise.
+            </summary>
+            <param name="graph"></param>
+            <returns>True if the graph is connected, false otherwise.</returns>
+            <raises>GraphLibraryNotImplemented: – If graph is directed.</raises>
+            <note>For undirected graphs only</note>
+        </member>
+        <member name="M:GraphLibrary.Component.NumberConectedComponents(GraphLibrary.Graphs.BaseGraph)">
+            <summary>
+            Returns the number of connected components.
+            </summary>
+            <param name="graph">BaseGraph graph.</param>
+            <returns>Number of connected components.</returns>
+            <note>For undirected graphs only.</note>
+        </member>
+        <member name="M:GraphLibrary.Component.ConnectedComponents(GraphLibrary.Graphs.BaseGraph)">
+            <summary>
+            Generate connected components.
+            </summary>
+            <param name="graph">BaseGraph graph.</param>
+            <returns>Yields sets of nodes, one for each component of graph.</returns>
+        </member>
+        <member name="M:GraphLibrary.Component.NodeConnectedComponent(GraphLibrary.Graphs.BaseGraph,System.Int32)">
+            <summary>
+            Returns the set of nodes in the component of graph containing node n.
+            </summary>
+            <param name="graph">BaseGraph graph.</param>
+            <param name="node">Node.</param>
+            <returns>A set of nodes in the component of G containing node n.</returns>
+            <note>For undirected graphs only.</note>
+        </member>
+        <member name="M:GraphLibrary.Component.WeaklyConnectedComponents(GraphLibrary.Graphs.BaseGraph)">
+            <summary>
+            Generate weakly connected components of graph.
+            </summary>
+            <param name="graph">BaseGraph graph.</param>
+            <returns>Yields sets of nodes, one for each weakly connected component of G.</returns>
+        </member>
+        <member name="M:GraphLibrary.Component.IsWeaklyConnected(GraphLibrary.Graphs.BaseGraph)">
+            <summary>
+            Test directed graph for weak connectivity.
+            A directed graph is weakly connected if and only if the graph is connected when the direction of the edge between nodes is ignored.
+            Note that if a graph is strongly connected, it is by definition weakly connected as well.
+            </summary>
+            <param name="graph">BaseGraph graph.</param>
+            <returns>True if the graph is weakly connected, False otherwise.</returns>
+        </member>
+        <member name="M:GraphLibrary.Component.NumberWeaklyConectedComponents(GraphLibrary.Graphs.BaseGraph)">
+            <summary>
+            Returns the number of weakly connected components in graph.
+            </summary>
+            <param name="graph">BaseGraph graph</param>
+            <returns>Number of weakly connected components.</returns>
+        </member>
+        <member name="M:GraphLibrary.Component.StronglyConnectedComponents(GraphLibrary.Graphs.BaseGraph)">
+            <summary>
+            Generate nodes in strongly connected components of graph.
+            </summary>
+            <param name="graph">BaseGraph graph.</param>
+            <returns>Yields sets of nodes, one for each strongly connected component of G.</returns>
+        </member>
+        <member name="M:GraphLibrary.Component.FastBfs(GraphLibrary.Graphs.BaseGraph,System.Int32)">
+            <summary>
+            A fast BFS node generator.
+            </summary>
+            <param name="graph"></param>
+            <param name="sourceNode"></param>
+            <returns>BFS nodes.</returns>
+        </member>
+        <member name="T:GraphLibrary.Community">
+            <summary>
+            Community
+            </summary>
+        </member>
+        <member name="M:GraphLibrary.Community.GirwanNewman(GraphLibrary.Graphs.BaseGraph)">
+            <summary>
+            Finds communities in a graph using the Girvan–Newman method.
+            </summary>
+            <param name="graph"></param>
+            <returns>Yields tuples of sets of nodes in G. Each set of nodes is a community, each tuple is a sequence of communities at a particular level of the algorithm.</returns>
+            <note>The Girvan–Newman algorithm detects communities by progressively
+            removing edges from the original graph.The algorithm removes the
+            "most valuable" edge, traditionally the edge with the highest
+            betweenness centrality, at each step.As the graph breaks down into
+            pieces, the tightly knit community structure is exposed and the
+            result can be depicted as a dendrogram.</note>
+        </member>
+        <member name="M:GraphLibrary.Community.LFRBenchmarkGraph(System.Int32,System.Single,System.Single,System.Single,System.Single,System.Int32,System.Int32,System.Int32,System.Int32,System.Single,System.Int32,System.Int32)">
+            <summary>
+            Returns the LFR benchmark graph.
+            </summary>
+            <param name="n"></param>
+            <param name="tau1"></param>
+            <param name="tau2"></param>
+            <param name="mu"></param>
+            <param name="averageDegree"></param>
+            <param name="minDegree"></param>
+            <param name="maxDegree"></param>
+            <param name="minCommunity"></param>
+            <param name="MaxCommunity"></param>
+            <param name="tol"></param>
+            <param name="max_iters"></param>
+            <param name="seed"></param>
+            <returns>The LFR benchmark graph generated according to the specified parameters</returns>
+        </member>
+        <member name="T:GraphLibrary.Cycles">
+            <summary>
+            Cycles
+            </summary>
+        </member>
+        <member name="M:GraphLibrary.Cycles.CycleBasis(GraphLibrary.Graphs.BaseGraph)">
+            <summary>
+            Returns a list of cycles which form a basis for cycles of G.
+            
+                A basis for cycles of a network is a minimal collection of
+            cycles such that any cycle in the network can be written
+            as a sum of cycles in the basis.Here summation of cycles
+            is defined as "exclusive or" of the edges.Cycle bases are
+            useful, e.g.when deriving equations for electric circuits
+            using Kirchhoff's Laws.
+            </summary>
+            <param name="graph">BaseGraph</param>
+            <returns>A list of cycle lists.  Each cycle list is a list of nodes which forms a cycle(loop) in G.</returns>
+        </member>
+        <member name="T:GraphLibrary.DistanceMeasures">
+            <summary>
+            Distance measures
+            </summary>
+        </member>
+        <member name="M:GraphLibrary.DistanceMeasures.EffectiveDiameter(GraphLibrary.Graphs.BaseGraph,System.Double)">
+            <summary>
+            Returns the effective diameter of the graph G.
+            The diameter is the maximum eccentricity.
+            </summary>
+            <param name="graph"></param>
+            <param name="p">percentile</param>
+            <returns>Returns integer the diameter of the graph G.</returns>
+        </member>
+        <member name="M:GraphLibrary.DistanceMeasures.Radius(GraphLibrary.Graphs.BaseGraph)">
+            <summary>
+            Returns the radius of the graph G. The radius is the minimum eccentricity.
+            </summary>
+            <param name="graph"></param>
+            <returns>Integer radius of graph.</returns>
+        </member>
+        <member name="M:GraphLibrary.DistanceMeasures.Center(GraphLibrary.Graphs.BaseGraph)">
+            <summary>
+            Returns the center of the graph G. The center is the set of nodes with eccentricity equal to radius.
+            </summary>
+            <param name="graph"></param>
+            <returns>List of nodes in center.</returns>
+        </member>
+        <member name="M:GraphLibrary.DistanceMeasures.Periphery(GraphLibrary.Graphs.BaseGraph)">
+            <summary>
+            Returns the periphery of the graph G.The periphery is the set of nodes with eccentricity equal to the diameter.
+            </summary>
+            <param name="graph"></param>
+            <returns>List of nodes in periphery</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:GraphLibrary.DistanceMeasures.NetworkDistances(GraphLibrary.Graphs.BaseGraph)" -->
+        <member name="M:GraphLibrary.DistanceMeasures.UndirectedDistances(GraphLibrary.Graphs.BaseGraph,System.Int32)">
+            <summary>
+            UndirectedDistances is a supporting function used by Diameter
+            </summary>
+            <param name="graph"></param>
+            <param name="node"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GraphLibrary.DistanceMeasures.Eccentricity(GraphLibrary.Graphs.BaseGraph)">
+            <summary>
+            Eccentricity
+            </summary>
+            <param name="graph"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GraphLibrary.DistanceMeasures.SingleSourceShortestPath(GraphLibrary.Graphs.BaseGraph,System.Int32)">
+            <summary>
+            Compute the shortest path lengths from source to all reachable nodes.
+            </summary>
+            <param name="graph"></param>
+            <param name="node"></param>
+            <returns>Dict keyed by node to shortest path length to source.</returns>
+        </member>
+        <member name="T:GraphLibrary.GraphGenerators">
+            <summary>
+            Graph generators
+            </summary>
+        </member>
+        <member name="M:GraphLibrary.GraphGenerators.CompleteGraph(System.Int32,GraphLibrary.Graphs.GraphTypes)">
+            <summary>
+            Returns complete graph.
+            Each node is connected to each other node.
+            </summary>
+            <param name="numberOfNodes">Number of nodes in generated graph. Higher than 0.</param>
+            <param name="graphType">Graph type, defaults to <see cref="F:GraphLibrary.Graphs.GraphTypes.GraphFastDirected"/></param>
+            <returns>A complete graph with specified number of nodes.</returns>
+        </member>
+        <member name="M:GraphLibrary.GraphGenerators.ErdosRenyiGraph(System.Int32,System.Double,GraphLibrary.Graphs.GraphTypes)">
+            <summary>
+            Creates Erdos-Renyi graph.
+            </summary>
+            <param name="numberOfNodes">Number of nodes in generated graph. Higher than 0.</param>
+            <param name="propabilityOfEdge">Probability of the edge between two nodes. Value between 0 and 1.</param>
+            <param name="graphType">Graph type, defaults to <see cref="F:GraphLibrary.Graphs.GraphTypes.GraphFastDirected"/></param>
+            <returns>A ErdosReny graph.</returns>
+        </member>
+        <member name="M:GraphLibrary.GraphGenerators.PreferentialAttachmentModel(System.Int32,System.Int32,GraphLibrary.Graphs.GraphTypes)">
+            <summary>
+            Generates a graph using the preferential attachment model.
+            </summary>
+            <param name="numberOfNodes">Number of nodes in generated graph. Higher than 0.</param>
+            <param name="averageNeighbors">Average node degree.</param>
+            <param name="graphType">Graph type, defaults to <see cref="F:GraphLibrary.Graphs.GraphTypes.GraphFastDirected"/></param>
+            <returns>A generated preferential attachment graph.</returns>
+        </member>
+        <member name="T:GraphLibrary.Graphs.BaseGraph">
+            <summary>
+            Base class for graphs
+            </summary>
+        </member>
+        <member name="P:GraphLibrary.Graphs.BaseGraph.Nodes">
+            <summary>
+            Gets list of nodes
+            </summary>
+        </member>
+        <member name="P:GraphLibrary.Graphs.BaseGraph.Edges">
+            <summary>
+            Gets list of eges
+            </summary>
+        </member>
+        <member name="P:GraphLibrary.Graphs.BaseGraph.NumberOfNodes">
+            <summary>
+            Gets number of nodes
+            </summary>
+        </member>
+        <member name="P:GraphLibrary.Graphs.BaseGraph.NumberOfEdges">
+            <summary>
+            Gets list of edges
+            </summary>
+        </member>
+        <member name="M:GraphLibrary.Graphs.BaseGraph.ReadPajek(System.String)">
+            <summary>
+            Creates graph from Pajek file
+            </summary>
+            <param name="path">Path to the file</param>
+        </member>
+        <member name="M:GraphLibrary.Graphs.BaseGraph.ReadEdgeList(System.String)">
+            <summary>
+            Creates graph from Edge list file
+            </summary>
+            <param name="path">Path to the file</param>
+        </member>
+        <member name="M:GraphLibrary.Graphs.BaseGraph.NodeAdd(System.Int32)">
+            <summary>
+            Adds node
+            </summary>
+            <param name="node">Node</param>
+        </member>
+        <member name="M:GraphLibrary.Graphs.BaseGraph.NodeAdd(System.Collections.Generic.List{System.Int32})">
+            <summary>
+            Adds multiple nodes
+            </summary>
+            <param name="nodes">List of nodes</param>
+        </member>
+        <member name="M:GraphLibrary.Graphs.BaseGraph.NodeRemove(System.Int32)">
+            <summary>
+            Removes a node
+            </summary>
+            <param name="node">node</param>
+        </member>
+        <member name="M:GraphLibrary.Graphs.BaseGraph.EdgeAdd(System.Int32,System.Int32)">
+            <summary>
+            Adds edge between two nodes
+            </summary>
+            <param name="node1">Node one</param>
+            <param name="node2">Node two</param>
+        </member>
+        <member name="M:GraphLibrary.Graphs.BaseGraph.EdgeAdd(System.Collections.Generic.List{System.Tuple{System.Int32,System.Int32}})">
+            <summary>
+            Adds multiple edges
+            </summary>
+            <param name="edges">List of pairs of nodes</param>
+        </member>
+        <member name="M:GraphLibrary.Graphs.BaseGraph.EdgeRemove(System.Int32,System.Int32)">
+            <summary>
+            Removes an edge between two nodes
+            </summary>
+            <param name="node1">Node one</param>
+            <param name="node2">Node two</param>
+        </member>
+        <member name="M:GraphLibrary.Graphs.BaseGraph.Neighbors(System.Int32)">
+            <summary>
+            Returns list of in and out neighbors of a node
+            </summary>
+            <param name="node">Node</param>
+            <returns>List of in and out neighbors</returns>
+        </member>
+        <member name="M:GraphLibrary.Graphs.BaseGraph.NeighborsIn(System.Int32)">
+            <summary>
+            Returns list of in neighbors of a node
+            List of in-nodes where in-node -> node
+            </summary>
+            <param name="node">Node</param>
+            <returns>List of in neighbors</returns>
+        </member>
+        <member name="M:GraphLibrary.Graphs.BaseGraph.NeighborsOut(System.Int32)">
+            <summary>
+            Returns list of out neighbors of a node
+            </summary>
+            <param name="node">Node</param>
+            <returns>List of out neighbors</returns>
+        </member>
+        <member name="M:GraphLibrary.Graphs.BaseGraph.NodeDegree(System.Int32)">
+            <summary>
+            Number of in and out neighbors of a node
+            </summary>
+            <param name="node">Node</param>
+            <returns>Number of in and out neighbors</returns>
+        </member>
+        <member name="M:GraphLibrary.Graphs.BaseGraph.NodeDegrees">
+            <summary>
+            Number of in and out neighbors of all nodes
+            </summary>
+            <returns>Dictionary of nodes and numbers of in and out neighbors</returns>
+        </member>
+        <member name="M:GraphLibrary.Graphs.BaseGraph.NodeDegreeIn(System.Int32)">
+            <summary>
+            Number of in neighbors of a node
+            </summary>
+            <param name="node">Node</param>
+            <returns>Number of in neighbors</returns>
+        </member>
+        <member name="M:GraphLibrary.Graphs.BaseGraph.NodeDegreesIn">
+            <summary>
+            Number of in neighbors of all nodes
+            </summary>
+            <returns>Dictionary of nodes and numbers of out neighbors</returns>
+        </member>
+        <member name="M:GraphLibrary.Graphs.BaseGraph.NodeDegreeOut(System.Int32)">
+            <summary>
+            Number of out neighbors of a node
+            </summary>
+            <param name="node">Node</param>
+            <returns>Number of out neighbors</returns>
+        </member>
+        <member name="M:GraphLibrary.Graphs.BaseGraph.NodeDegreesOut">
+            <summary>
+            Number of out neighbors of all nodes
+            </summary>
+            <returns>Dictionary of nodes and numbers of out neighbors</returns>
+        </member>
+        <member name="T:GraphLibrary.Graphs.GraphFactory">
+            <summary>
+            GraphFactory
+            </summary>
+        </member>
+        <member name="T:GraphLibrary.Graphs.GraphsFast.GraphFast">
+            <summary>
+            Graph with only the basic functionality
+            </summary>
+        </member>
+        <member name="P:GraphLibrary.Graphs.GraphsFast.GraphFast.Network">
+            <summary>
+            Property that holds graph data.
+            Each node has list of neighbors.
+            </summary>
+        </member>
+        <member name="P:GraphLibrary.Graphs.GraphsFast.GraphFast.Nodes">
+            <summary>
+            Gets list of nodes
+            </summary>
+        </member>
+        <member name="P:GraphLibrary.Graphs.GraphsFast.GraphFast.NumberOfNodes">
+            <summary>
+            Gets number of nodes
+            </summary>
+        </member>
+        <member name="P:GraphLibrary.Graphs.GraphsFast.GraphFast.NumberOfEdges">
+            <summary>
+            Gets list of edges
+            </summary>
+        </member>
+        <member name="M:GraphLibrary.Graphs.GraphsFast.GraphFast.NodeAdd">
+            <summary>
+            Adds node consecutively
+            </summary>
+        </member>
+        <member name="M:GraphLibrary.Graphs.GraphsFast.GraphFast.NodeAdd(System.Int32)">
+            <summary>
+            Adds node
+            </summary>
+            <param name="node">Node</param>
+        </member>
+        <member name="M:GraphLibrary.Graphs.GraphsFast.GraphFast.NodeAdd(System.Collections.Generic.List{System.Int32})">
+            <summary>
+            Adds multiple nodes
+            </summary>
+            <param name="nodes">List of nodes</param>
+        </member>
+        <member name="M:GraphLibrary.Graphs.GraphsFast.GraphFast.NodeRemove(System.Int32)">
+            <summary>
+            Removes a node
+            </summary>
+            <param name="node">node</param>
+        </member>
+        <member name="M:GraphLibrary.Graphs.GraphsFast.GraphFast.EdgeAdd(System.Int32,System.Int32)">
+            <summary>
+            Adds edge between two nodes
+            </summary>
+            <param name="node1">Node one</param>
+            <param name="node2">Node two</param>
+        </member>
+        <member name="M:GraphLibrary.Graphs.GraphsFast.GraphFast.EdgeAdd(System.Collections.Generic.List{System.Tuple{System.Int32,System.Int32}})">
+            <summary>
+            Adds multiple edges
+            </summary>
+            <param name="edges">List of pairs of nodes</param>
+        </member>
+        <member name="M:GraphLibrary.Graphs.GraphsFast.GraphFast.OnEdgeAdd(System.Int32,System.Int32)">
+            <summary>
+            Adds edge between two nodes
+            </summary>
+            <param name="node1">Node one</param>
+            <param name="node2">Node two</param>
+        </member>
+        <member name="M:GraphLibrary.Graphs.GraphsFast.GraphFast.EdgeRemove(System.Int32,System.Int32)">
+            <summary>
+            Removes an edge between two nodes
+            </summary>
+            <param name="node1">Node one</param>
+            <param name="node2">Node two</param>
+        </member>
+        <member name="M:GraphLibrary.Graphs.GraphsFast.GraphFast.OnEdgeRemove(System.Int32,System.Int32)">
+            <summary>
+            Removes an edge between two nodes
+            </summary>
+            <param name="node1">Node one</param>
+            <param name="node2">Node two</param>
+        </member>
+        <member name="M:GraphLibrary.Graphs.GraphsFast.GraphFast.NeighborsOut(System.Int32)">
+            <summary>
+            Returns list of out neighbors of a node
+            </summary>
+            <param name="node">Node</param>
+            <returns>List of out neighbors</returns>
+        </member>
+        <member name="M:GraphLibrary.Graphs.GraphsFast.GraphFast.NodeDegreeOut(System.Int32)">
+            <summary>
+            Number of out neighbors of a node
+            </summary>
+            <param name="node">Node</param>
+            <returns>Number of out neighbors</returns>
+        </member>
+        <member name="M:GraphLibrary.Graphs.GraphsFast.GraphFast.NodeDegreesOut">
+            <summary>
+            Number of out neighbors of all nodes
+            </summary>
+            <returns>Dictionary of nodes and numbers of out neighbors</returns>
+        </member>
+        <member name="M:GraphLibrary.Graphs.GraphsFast.GraphFast.ReadPajek(System.String)">
+            <summary>
+            Creates graph from Pajek file
+            </summary>
+            <param name="path">Path to the file</param>
+        </member>
+        <member name="T:GraphLibrary.Graphs.GraphsFast.GraphFastDirected">
+            <summary>
+            GraphFast directed
+            </summary>
+        </member>
+        <member name="P:GraphLibrary.Graphs.GraphsFast.GraphFastDirected.Edges">
+            <summary>
+            Gets list of eges
+            </summary>
+        </member>
+        <member name="M:GraphLibrary.Graphs.GraphsFast.GraphFastDirected.Neighbors(System.Int32)">
+            <summary>
+            Returns list of in and out neighbors of a node
+            </summary>
+            <param name="node">Node</param>
+            <returns>List of in and out neighbors</returns>
+        </member>
+        <member name="M:GraphLibrary.Graphs.GraphsFast.GraphFastDirected.NeighborsIn(System.Int32)">
+            <summary>
+            Returns list of in neighbors of a node.
+            </summary>
+            <param name="node">Node</param>
+            <returns>List of in neighbors</returns>
+        </member>
+        <member name="M:GraphLibrary.Graphs.GraphsFast.GraphFastDirected.NodeDegree(System.Int32)">
+            <summary>
+            Returns number of in and out neighbors of a node
+            </summary>
+            <param name="node">Node</param>
+            <returns>Number of in and out neighbors</returns>
+        </member>
+        <member name="M:GraphLibrary.Graphs.GraphsFast.GraphFastDirected.NodeDegrees">
+            <summary>
+            Number of in and out neighbors of all nodes
+            </summary>
+            <param name="node">Node</param>
+            <returns>Dictionary of nodes and numbers of in and out neighbors</returns>
+        </member>
+        <member name="M:GraphLibrary.Graphs.GraphsFast.GraphFastDirected.NodeDegreeIn(System.Int32)">
+            <summary>
+            Returns number of in neighbors of a node
+            </summary>
+            <param name="node">Node</param>
+            <returns>Number of in neighbors</returns>
+        </member>
+        <member name="M:GraphLibrary.Graphs.GraphsFast.GraphFastDirected.NodeDegreesIn">
+            <summary>
+            Number of in neighbors of all nodes
+            </summary>
+            <param name="node">Node</param>
+            <returns>Dictionary of nodes and numbers of in neighbors</returns>
+        </member>
+        <member name="M:GraphLibrary.Graphs.GraphsFast.GraphFastDirected.OnEdgeAdd(System.Int32,System.Int32)">
+            <summary>
+            Adds edge from node1 to node2
+            </summary>
+            <param name="node1">Node from</param>
+            <param name="node2">Node to</param>
+        </member>
+        <member name="M:GraphLibrary.Graphs.GraphsFast.GraphFastDirected.OnEdgeRemove(System.Int32,System.Int32)">
+            <summary>
+            Removes edge from node1 to node2
+            </summary>
+            <param name="node1">Node from</param>
+            <param name="node2">Node to</param>
+        </member>
+        <member name="T:GraphLibrary.Graphs.GraphsFast.GraphFastUndirected">
+            <summary>
+            GraphFast undirected
+            </summary>
+        </member>
+        <member name="P:GraphLibrary.Graphs.GraphsFast.GraphFastUndirected.Edges">
+            <summary>
+            Gets list of eges
+            </summary>
+        </member>
+        <member name="M:GraphLibrary.Graphs.GraphsFast.GraphFastUndirected.Neighbors(System.Int32)">
+            <summary>
+            Returns list of in and out neighbors of a node
+            On GraphFastUndirected <see cref="M:GraphLibrary.Graphs.GraphsFast.GraphFastUndirected.Neighbors(System.Int32)"/>, <see cref="M:GraphLibrary.Graphs.GraphsFast.GraphFastUndirected.NeighborsIn(System.Int32)"/> and <see cref="M:GraphLibrary.Graphs.GraphsFast.GraphFast.NeighborsOut(System.Int32)"/> are the same
+            </summary>
+            <param name="node">Node</param>
+            <returns>List of in and out neighbors</returns>
+        </member>
+        <member name="M:GraphLibrary.Graphs.GraphsFast.GraphFastUndirected.NeighborsIn(System.Int32)">
+            <summary>
+            Returns list of in neighbors of a node.
+            On GraphFastUndirected <see cref="M:GraphLibrary.Graphs.GraphsFast.GraphFastUndirected.Neighbors(System.Int32)"/>, <see cref="M:GraphLibrary.Graphs.GraphsFast.GraphFastUndirected.NeighborsIn(System.Int32)"/> and <see cref="M:GraphLibrary.Graphs.GraphsFast.GraphFast.NeighborsOut(System.Int32)"/> are the same
+            </summary>
+            <param name="node">Node</param>
+            <returns>List of in neighbors</returns>
+        </member>
+        <member name="M:GraphLibrary.Graphs.GraphsFast.GraphFastUndirected.NodeDegree(System.Int32)">
+            <summary>
+            Returns number of in and out neighbors of a node
+            On GraphFastUndirected <see cref="M:GraphLibrary.Graphs.GraphsFast.GraphFastUndirected.NodeDegree(System.Int32)"/>, <see cref="M:GraphLibrary.Graphs.GraphsFast.GraphFastUndirected.NodeDegreeIn(System.Int32)"/> and <see cref="M:GraphLibrary.Graphs.GraphsFast.GraphFast.NodeDegreeOut(System.Int32)"/> are the same
+            </summary>
+            <param name="node">Node</param>
+            <returns>Number of in and out neighbors</returns>
+        </member>
+        <member name="M:GraphLibrary.Graphs.GraphsFast.GraphFastUndirected.NodeDegrees">
+            <summary>
+            Number of in and out neighbors of all nodes
+            On GraphFastUndirected <see cref="M:GraphLibrary.Graphs.GraphsFast.GraphFastUndirected.NodeDegrees"/>, <see cref="M:GraphLibrary.Graphs.GraphsFast.GraphFastUndirected.NodeDegreesIn"/> and <see cref="M:GraphLibrary.Graphs.GraphsFast.GraphFast.NodeDegreesOut"/> are the same
+            </summary>
+            <returns>Dictionary of nodes and numbers of in and out neighbors</returns>
+        </member>
+        <member name="M:GraphLibrary.Graphs.GraphsFast.GraphFastUndirected.NodeDegreeIn(System.Int32)">
+            <summary>
+            Returns number of in neighbors of a node
+            On GraphFastUndirected <see cref="M:GraphLibrary.Graphs.GraphsFast.GraphFastUndirected.NodeDegree(System.Int32)"/>, <see cref="M:GraphLibrary.Graphs.GraphsFast.GraphFastUndirected.NodeDegreeIn(System.Int32)"/> and <see cref="M:GraphLibrary.Graphs.GraphsFast.GraphFast.NodeDegreeOut(System.Int32)"/> are the same
+            </summary>
+            <param name="node">Node</param>
+            <returns>Number of in neighbors</returns>
+        </member>
+        <member name="M:GraphLibrary.Graphs.GraphsFast.GraphFastUndirected.NodeDegreesIn">
+            <summary>
+            Number of in neighbors of all nodes
+            On GraphFastUndirected <see cref="M:GraphLibrary.Graphs.GraphsFast.GraphFastUndirected.NodeDegrees"/>, <see cref="M:GraphLibrary.Graphs.GraphsFast.GraphFastUndirected.NodeDegreesIn"/> and <see cref="M:GraphLibrary.Graphs.GraphsFast.GraphFast.NodeDegreesOut"/> are the same
+            </summary>
+            <returns>Dictionary of nodes and numbers of in neighbors</returns>
+        </member>
+        <member name="M:GraphLibrary.Graphs.GraphsFast.GraphFastUndirected.OnEdgeAdd(System.Int32,System.Int32)">
+            <summary>
+            Adds edge from node1 to node2
+            and edge from node2 to node1
+            </summary>
+            <param name="node1">Node from</param>
+            <param name="node2">Node to</param>
+        </member>
+        <member name="M:GraphLibrary.Graphs.GraphsFast.GraphFastUndirected.OnEdgeRemove(System.Int32,System.Int32)">
+            <summary>
+            Removes edge from node1 to node2
+            and edge from node2 to node1
+            </summary>
+            <param name="node1">Node from</param>
+            <param name="node2">Node to</param>
+        </member>
+        <member name="T:GraphLibrary.Helpers">
+            <summary>
+            Helpers class.
+            </summary>
+        </member>
+        <member name="M:GraphLibrary.Helpers.CombinationsOfEdges(System.Collections.Generic.List{System.Int32})">
+            <summary>
+            Returns combinations of edges from list of nodes.
+            Used for undirected graphs
+            </summary>
+            <param name="nodes">List of nodes</param>
+            <returns>Returns combinations of edges from list of nodes</returns>
+            <example>
+            Nodes = {1, 2, 3}
+            Result = 12, 13, 23
+            </example>
+        </member>
+        <member name="M:GraphLibrary.Helpers.VariationsOfEdges(System.Collections.Generic.List{System.Int32})">
+            <summary>
+            Returns variations of edges from list of nodes.
+            Used for directed graphs.
+            </summary>
+            <param name="nodes">List of edges</param>
+            <returns>Returns variations of edges from list of nodes.</returns>
+            <example>
+            Nodes = {1, 2, 3}
+            Result = 12, 13, 21, 23, 31 ,32
+            </example>
+        </member>
+        <member name="T:GraphLibrary.ShortestPath">
+            <summary>
+            Shortest path finder
+            </summary>
+        </member>
+        <member name="M:GraphLibrary.ShortestPath.ShorthestPath(GraphLibrary.Graphs.BaseGraph,System.Int32,System.Int32)">
+            <summary>
+            Finds shortes path, given the start and end nodes.
+            </summary>
+            <param name="graph">BaseGraph graph.</param>
+            <param name="nodeSource">Source node.</param>
+            <param name="nodeEnd">End node</param>
+            <returns>Returns the shortest path from start to end node.</returns>
+        </member>
+        <member name="T:GraphLibrary.Traversal">
+            <summary>
+            Graph traversal algorithms.
+            </summary>
+        </member>
+        <member name="M:GraphLibrary.Traversal.BreadthFirstSearchAll(GraphLibrary.Graphs.BaseGraph,System.Int32,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Returns all nodes with distance from nodeSource and predecesor based on Breadth first search.
+            </summary>
+            <param name="graph">BaseGraph graph</param>
+            <param name="nodeSource">Node from where the BFS algorithm starts.</param>
+            <param name="depth">Up to which depth (distance) the nodes are returned.</param>
+            <returns>Returns nodes with distances and it's predecesor.</returns>
+        </member>
+        <member name="M:GraphLibrary.Traversal.BreadthFirstSearch(GraphLibrary.Graphs.BaseGraph,System.Int32,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Returns node with node with distance from nodeSource and predecesor based on Breadth first search.
+            </summary>
+            <param name="graph">BaseGraph graph</param>
+            <param name="nodeSource">Node from where the BFS algorithm starts.</param>
+            <param name="depth">Up to which depth (distance) the nodes are returned.</param>
+            <returns>Yields Tuple of nodes, distance and it's predecesor.</returns>
+        </member>
+        <member name="M:GraphLibrary.Traversal.DepthFirstSearchAll(GraphLibrary.Graphs.BaseGraph,System.Int32,System.Nullable{System.Int32},System.Int32)">
+            <summary>
+            Returns all nodes with distance from nodeSource and predecesor based on Depth first search.
+            </summary>
+            <param name="graph">BaseGraph graph.</param>
+            <param name="nodeSource">Node from where the DFS algorithm starts.</param>
+            <param name="depth">Up to which depth (distance) the nodes are returned.</param>
+            <returns>Returns nodes with distances and it's predecesor.</returns>
+        </member>
+        <member name="M:GraphLibrary.Traversal.DepthFirstSearch(GraphLibrary.Graphs.BaseGraph,System.Int32,System.Nullable{System.Int32},System.Int32)">
+            <summary>
+            Returns node with node with distance from nodeSource and predecesor based on Breadth first search.
+            </summary>
+            <param name="graph">BaseGraph graph.</param>
+            <param name="nodeSource">Node from where the BFS algorithm starts.</param>
+            <param name="depth">Up to which depth (distance) the nodes are returned.</param>
+            <returns>Yields Tuple of nodes, distance and it's predecesor.</returns>
+        </member>
+    </members>
+</doc>

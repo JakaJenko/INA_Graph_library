@@ -5,6 +5,9 @@ using System.Text;
 
 namespace GraphLibrary.Graphs.GraphsFast
 {
+    /// <summary>
+    /// GraphFast undirected
+    /// </summary>
     public class GraphFastUndirected : GraphFast
     {
         public GraphFastUndirected() { }

@@ -2,6 +2,28 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>1.0.1</Version>
+    <PackageLicenseFile>License.txt</PackageLicenseFile>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Copyright>CC BY</Copyright>
+    <PackageProjectUrl>https://github.com/JakaJenko/INA_Graph_library</PackageProjectUrl>
+    <PackageId>GraphNetworkLibrary</PackageId>
+    <Authors>Jaka Jenko, Julijan Jug</Authors>
+    <Company></Company>
+    <Product>GraphNetworkLibrary</Product>
+    <Description>GraphNetworkLibrary is a C# library for the creation, manipulation, and study of the structure, dynamics, and functions of complex networks. The inspiration for the library comes from the Networkx library for Python. The library includes some of the core algorithms for network analysis.</Description>
   </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>H:\Jenko\Documents\Magisterij\1_letnik\ARPI_Analiza_Omrezij\INA_Graph_library\GraphProject\GraphLibrary\GraphLibrary.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="License.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
